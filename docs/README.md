@@ -11,13 +11,13 @@
 
 HowDoI is a full-stack web application based on Instructables, which hosts guides to educate users on how to do things, it is built on a React/Redux architect and runs on a Postgresql database that is served to the frontend by Ruby on Rails. By the end of Week 9 this app should have the below functions with minimal bugs and some CSS styling
 
--[ ]Hosting on Heroku
--[ ]New account creation, login, and guest/demo -[ ]login
--[ ]Guides
--[ ]Commenting
--[ ]Guides have Photos/Videos
--[ ]Users can search for keywords
--[ ]Production README
+- [ ]Hosting on Heroku
+- [ ]New account creation, login, and guest/demo login
+- [ ]Guides
+- [ ]Commenting
+- [ ]Guides have Photos/Videos
+- [ ]Users can search for keywords
+- [ ]Production README
 
 ## Design Docs
 * [View Wireframes][wireframes]
