@@ -36,6 +36,6 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
-| "/home/guide/:guideId" | "GuideContainer" |
+| "/guide/:guideId" | "GuideContainer" |
 | "/new-guide" | "NewGuideContainer" |
 | "/new-step" | "NewStep" |

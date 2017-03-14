@@ -43,21 +43,17 @@ Objective: Allow users to signup and sign in
 
 Objective: Allow users to create/delete guides using the API
 
-**Phase 3: Comments(1 day)**
+**Phase 3: Comments(2 day)**
 
 Objective: Users can write/delete comments on guides. Owner of guide can delete any comment
 
-**Phase 4: Photo/Video(1 day)**
+**Phase 4: Photo/Video(2 day)**
 
 Objective: Users can add photos and videos to their guides
 
 **Phase 5: Searching(1 day)**
 
 Objective: users can search guides based on keywords using the search bar
-
-**Phase 6: Clean up(2 days)**
-
-Objective: Using CSS make the product look as good as the copied site Instructables
 
 **Phase 7: Bonus(any remaining time)**
 
