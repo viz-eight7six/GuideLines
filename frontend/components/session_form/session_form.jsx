@@ -15,6 +15,12 @@ class SessionForm extends React.Component {
     return this.redirectIfLoggedIn();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.formType !== newProps.formType) {
+      this.props.clearErrors();
+    }
+  }
+
   redirectIfLoggedIn(){
     if (this.props.loggedIn){
       return this.props.router.push('/');
@@ -36,7 +42,7 @@ class SessionForm extends React.Component {
   renderErrors(){
     if(this.props.errors){
       let errors = this.props.errors.map((error, i) => (
-        <li key={i}>error</li>
+        <li key={i}>{error}</li>
       ));
       return (
         <ul>

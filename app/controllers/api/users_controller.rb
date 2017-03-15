@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
     else
       render(
-        json: @user.errors.full_messages,
+        json: {errors: @user.errors.full_messages},
         status: 401
       )
     end
