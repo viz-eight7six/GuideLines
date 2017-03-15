@@ -12,7 +12,7 @@ session_token   | string    | not null, indexed, unique
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
+title       | string    | not null, indexed, unique
 body        | text      | not null
 author_id   | integer   | not null, foreign key (references users), indexed
 
@@ -26,7 +26,7 @@ next_step_id| integer   |
 prev_step_id| integer   |
 guide_id    | integer   | not null, foreign key (references guide), indexed
 
-## comment
+## comments
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
