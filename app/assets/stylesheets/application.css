@@ -14,7 +14,7 @@
 
  */
 
- @import "base-reset.scss";
+ @import "./base-reset.scss";
 
  .main-nav {
  display: flex;
