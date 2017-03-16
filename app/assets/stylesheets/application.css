@@ -10,6 +10,37 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+
  */
+
+ @import "base-reset.scss";
+
+ .main-nav {
+ display: flex;
+ justify-content: space-between;
+ padding-top: 10px;
+ border-bottom: 1px solid $light-gray;
+ }
+
+
+ .left-nav,
+ .right-nav {
+ 	display: flex;
+ }
+
+ .left-nav > ul {
+ 	margin-left: 1px;
+ 	cursor: pointer;
+ 	text-transform: capitalize;;
+ 	font-family: $sans-serif;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ 	transition: background-color 0.3s;
+ }
+
+ .right-nav > ul {
+  font-size: 10px;
+ 	cursor: pointer;
+  justify-content: right;
+ }

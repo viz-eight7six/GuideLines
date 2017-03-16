@@ -4,17 +4,18 @@ import { Link, withRouter } from 'react-router';
 const links = (props) => {
   if(props.currentUser){
     return(
-      <nav>
+      <ul>
         <button onClick={props.logout}>Logout</button>
-      </nav>
+      </ul>
     );
   }
   else{
     return(
-      <nav>
-        <Link to='/login'>Login</Link>
-        <Link to='/signup'>signup</Link>
-      </nav>
+      <ul>
+        <Link to='/login'>Log In</Link>
+        &nbsp;or&nbsp;
+        <Link to='/signup'>Sign Up</Link>
+      </ul>
     );
   }
 };

@@ -2,11 +2,21 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 
 const App = ({ children }) => (
-  <div>
-    <h1>instructables</h1>
-    <GreetingContainer />
+  <section>
+    <header>
+      <nav className='main-nav'>
+        <nav className="left-nav">
+          <ul>
+            <h1>instructables</h1>
+          </ul>
+        </nav>
+        <nav className="right-nav">
+          <GreetingContainer />
+        </nav>
+      </nav>
+    </header>
     { children }
-  </div>
+  </section>
 );
 
 export default App;
