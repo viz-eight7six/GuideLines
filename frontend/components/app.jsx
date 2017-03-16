@@ -2,7 +2,7 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 
 const App = ({ children }) => (
-  <section>
+  <section className='whole'>
     <header>
       <nav className='main-nav'>
         <nav className="left-nav">

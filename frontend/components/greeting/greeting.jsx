@@ -13,7 +13,7 @@ const links = (props) => {
     return(
       <ul>
         <Link to='/login'>Log In</Link>
-        &nbsp;or&nbsp;
+        &nbsp; | &nbsp;
         <Link to='/signup'>Sign Up</Link>
       </ul>
     );
