@@ -7,13 +7,13 @@ export const fetchGuides = () => (
 export const fetchGuide = (id) => (
   $.ajax({
     method: "GET",
-    url: "api/guide"
+    url: `api/guides/#{id}`
   })
 );
 export const createGuide = (guide) => (
   $.ajax({
     method: "POST",
-    url: "api/guide",
+    url: "api/guides",
     data: {guide}
   })
 );

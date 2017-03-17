@@ -7,7 +7,7 @@ const guideReducer = (state = {errors: []}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_GUIDES:
       let guides = action.guides;
-      return merge({}, state, {guide});
+      return merge({}, state, {guides});
     case RECEIVE_GUIDE:
       let guide = action.guide;
       return merge({}, state, {guide});

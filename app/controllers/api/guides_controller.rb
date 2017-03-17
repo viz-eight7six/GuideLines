@@ -6,8 +6,8 @@ class Api::GuidesController < ApplicationController
 
   def create
     @guide = Guide.new(guide_params)
+    @guide.author_id = current_user.id
     if @guide.save
-      login(@guide)
       render "api/guides/show"
     else
       render(
@@ -15,6 +15,18 @@ class Api::GuidesController < ApplicationController
         status: 401
       )
     end
+  end
+
+  def update
+    @guide = Guide.find_by(id: id)
+    @user = current_user
+    if (@user.id == @guide.author_id && @guide.update(guide_params))
+      render "api/guides/show"
+    end
+    render(
+    json: {errors: ["Not owner"]},
+    status: 404
+    )
   end
 
   def destroy
