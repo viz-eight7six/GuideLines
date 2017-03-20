@@ -5,6 +5,8 @@ const links = (props) => {
   if(props.currentUser){
     return(
       <ul>
+        <Link to='/guides/new'>Create Guide</Link>
+        &nbsp; | &nbsp;
         <button onClick={props.logout}>Logout</button>
       </ul>
     );

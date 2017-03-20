@@ -6,12 +6,13 @@ import _ from 'lodash';
 
 const mapStateToProps = (state, ownProps) => {
   let guide = { title: "", body: "" };
-  return { guide };
+  let loggedIn = Boolean(state.session.currentUser);
+  let errors = state.guide.errors;
+  return { guide, loggedIn, errors};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    getGuide: (id) => dispatch(getGuide(id)),
     makeGuide: guide => dispatch(makeGuide(guide)),
     clearErrors: () => dispatch(clearErrors)
   };

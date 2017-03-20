@@ -17,10 +17,44 @@
  @import "./base-reset.scss";
  @import "./components/nav.scss";
  @import "./components/login.scss";
- @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+ @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Meera+Inimai');
 
  body {
-   background-color: #ADD8E6;
+   background-color: #F0F8FF;
+   font-family: 'Meera Inimai', sans-serif;
+ }
+
+ .slideshow-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .slideshow {
+   padding-bottom: 250px;
+   padding-top: 250px;
+   margin-right: 1px;
+   margin-left: 1px;
+   background-image: url(kermit.gif);
+   background-color: inherit;;
+   background-size: auto;;
+   background-position: center;
+   background-repeat: no-repeat;
+ }
+
+ .guide-list-container {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 50px;
+ }
+
+ .guide-list-container > ul {
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .guide-list-container > ul > li {
+   margin: 10px;
  }
 
  // / login-wrapper

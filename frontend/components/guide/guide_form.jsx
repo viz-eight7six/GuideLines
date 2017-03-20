@@ -4,28 +4,31 @@ import { Link, withRouter } from 'react-router';
 class GuideForm extends React.Component {
   constructor(props) {
       super(props);
-      this.state = props.guide;
+      this.state = this.props.guide;
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidUpdate(){
-  //   return this.redirectIfLoggedIn();
-  // }
+  componentDidUpdate(){
+    return this.redirectIfNotLoggedIn();
+  }
+
+
+
+  redirectIfNotLoggedIn(){
+    if (!this.props.loggedIn){
+      return this.props.router.push('/login');
+    }
+  }
 
   componentWillReceiveProps(newProps) {
       this.props.clearErrors();
   }
 
-  // redirectIfLoggedIn(){
-  //   if (this.props.loggedIn){
-  //     return this.props.router.push('/');
-  //   }
-  // }
-
   handleSubmit(e) {
     e.preventDefault();
-    const guide = this.state;
+    const guide = Object.assign({}, this.state);
     this.props.makeGuide(guide);
+    // this.props.router.push('/guides');
   }
 
   update(property) {
@@ -79,7 +82,7 @@ class GuideForm extends React.Component {
             <label>
               <textarea value={this.state.body}
                 onChange={this.update('body')}
-                placeholder='body'
+                placeholder='Body'
                 />
             </label>
             {this.renderErrors()}
@@ -96,4 +99,4 @@ class GuideForm extends React.Component {
   //...
 }
 
-export default withRouter(GuideForm);
+export default (GuideForm);

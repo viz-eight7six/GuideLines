@@ -20,9 +20,12 @@
 .login-form-container {
   display: flex;
   flex-direction: column;
-  background-image: url(rainbow-ribbon.jpg);
-  background-color: white;
-  background-size: contain;
+  background: linear-gradient(#f7f7f7 0%, #c1ceb0 90%),
+   linear-gradient(to right, #ff6a00 0%, #520f0f 50%),
+    url(flowers.jpg) 40px,
+    url(flowers.jpg) 40px;
+  background-blend-mode: screen, difference, lighten;
+  background-position: bottom right;
   background-repeat: no-repeat;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -30,6 +33,17 @@
   margin-right: 20px;
   padding-bottom: 100px;
   min-width: 635px;
+}
+
+.login-form-container > span {
+  position: fixed;
+  align-self: center;;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 350px;
+  padding-top: 50px;
+  font-family: 'Gloria Hallelujah';
+  font-size: 25px;
 }
 
 .login-form {
@@ -46,26 +60,28 @@
   width: 250px;
   margin-left: 20px;
   margin-top: 20px;
-  border: 2px outset lightgrey ;
+  border: 1px solid lightgrey ;
   border-bottom: none;
   background-color: #FFF;
   padding: 20px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  opacity: 0.8;
 }
 
 .login-footer-bar {
   width: 250px;
   margin-left: 20px;
   background-color: #F5F5F5;
-  border: 2px outset lightgrey;
+  border: 1px solid lightgrey;
   border-top: none;
   padding: 20px;
   margin-left: 20px;
-  font-size: 10px;
+  font-size: 13px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
+  opacity: 0.8;
 }
 
 .errors {

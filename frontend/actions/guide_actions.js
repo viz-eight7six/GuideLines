@@ -1,4 +1,5 @@
 import * as guideApi from "../util/guide_api_util";
+import {hashHistory} from "react-router";
 
 export const RECEIVE_ALL_GUIDES = "RECEIVE_ALL_GUIDES";
 export const RECEIVE_GUIDE = "RECEIVE_GUIDE";
@@ -40,6 +41,7 @@ export const makeGuide = (newGuide) => dispatch => (
   guideApi.createGuide(newGuide).then(guide =>
     dispatch(receiveGuide(guide)),
       errors => dispatch(receiveErrors(errors.responseJSON)))
+      .then((guide) => hashHistory.push(`/guides/${guide.id}`))
 );
 export const removeGuide = () => dispatch => (
   guideApi.deleteGuide().then(guide =>

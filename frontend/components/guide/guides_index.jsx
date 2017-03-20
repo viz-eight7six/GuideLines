@@ -15,7 +15,7 @@ class GuideIndex extends React.Component {
       <GuideIndexItem key={idx} guide={guide}/>
     ));
     return (
-      <div>
+      <div className="guide-list-container">
         <ul>
           {guides}
         </ul>

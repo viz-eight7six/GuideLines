@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
+import Home from './home';
 import SessionFormContainer from './session_form/session_form_container';
 import GuidesIndexContainer from './guide/guides_index_container';
 import GuideFormContainer from './guide/guide_form_container';
@@ -27,12 +28,12 @@ const _redirectIfLoggedIn = (nextState, replace) => {
     <Provider store={store}>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
+          <IndexRoute component={Home} />
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn} />
-          <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn} />
           <Route path="/guides" component={ GuidesIndexContainer } />
+          <Route path="/guides/new" component={ GuideFormContainer } onEnter={_ensureLoggedIn} />
           <Route path="/guides/:guideId" component={ GuideShowContainer } />
-          <Route path="/guides/new" component={ GuideFormContainer } onEnter={_ensureLoggedIn}/>
-
         </Route>
       </Router>
     </Provider>

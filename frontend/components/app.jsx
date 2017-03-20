@@ -1,5 +1,6 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
+import {Link} from 'react-router';
 
 const App = ({ children }) => (
   <section className='whole'>
@@ -7,7 +8,7 @@ const App = ({ children }) => (
       <nav className='main-nav'>
         <nav className="left-nav">
           <ul>
-            <h1>instructables</h1>
+            <Link to='/'>Guidelines</Link>
           </ul>
         </nav>
         <nav className="right-nav">

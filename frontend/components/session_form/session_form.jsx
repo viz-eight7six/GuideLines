@@ -95,6 +95,7 @@ class SessionForm extends React.Component {
         <div className="login-footer-bar">
           {this.renderFooterLink()}
         </div>
+        <span>Welcome to Guidelines</span>
       </div>
     </div>
     );
