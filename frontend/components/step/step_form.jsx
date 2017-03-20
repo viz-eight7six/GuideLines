@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import StepFormContainer from '../step/step_form_container';
 
-class GuideForm extends React.Component {
+class StepForm extends React.Component {
   constructor(props) {
       super(props);
-      this.state = this.props.guide;
+      this.state = this.props.step;
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -27,9 +26,9 @@ class GuideForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const guide = Object.assign({}, this.state);
-    this.props.makeGuide(guide);
-    // this.props.router.push('/guides');
+    const step = Object.assign({}, this.state);
+    this.props.makeStep(step);
+    // this.props.router.push('/steps');
   }
 
   update(property) {
@@ -50,19 +49,14 @@ class GuideForm extends React.Component {
       );
     }
   }
-
-  renderStep(){
-
-  }
-
   // renderFooterLink(){
   //   let redirectLink;
-  //   if(this.props.formType === 'guide'){
+  //   if(this.props.formType === 'step'){
   //     redirectLink = (<Link to='/signup'>Sign Up</Link>);
   //   }
   //   else{
   //     redirectLink = (<label>Already a member? &nbsp; &nbsp;
-  //       <Link to='/guide'>Log In</Link>
+  //       <Link to='/step'>Log In</Link>
   //       </label>);
   //   }
   //   return redirectLink;
@@ -70,14 +64,14 @@ class GuideForm extends React.Component {
 
   render() {
     return (
-      <div className="guide-form-wrapper">
-        <div className="guide-header-bar">
-          <h1 className="guide-form-header">New Guide</h1>
+      <div className="step-form-wrapper">
+        <div className="step-header-bar">
+          <h1 className="step-form-header">New Step</h1>
         </div>
-        <div className="guide-form-container">
-        <form className="guide-form-box"
+        <div className="step-form-container">
+        <form className="step-form-box"
           onSubmit={this.handleSubmit}>
-          <div className="guide-form">
+          <div className="step-form">
             <label>
               <input type="text" className="string-input" value={this.state.title}
                 onChange={this.update('title')}
@@ -95,7 +89,7 @@ class GuideForm extends React.Component {
             {this.renderErrors()}
             <br/>
           </div>
-          <input type="submit" value='Create Guide'></input>
+          <input type="submit" value='Create Step'></input>
         </form>
       </div>
     </div>
@@ -106,4 +100,4 @@ class GuideForm extends React.Component {
   //...
 }
 
-export default (GuideForm);
+export default (StepForm);
