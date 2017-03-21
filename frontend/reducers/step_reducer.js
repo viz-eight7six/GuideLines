@@ -1,6 +1,6 @@
 import {RECEIVE_ALL_STEPS, RECEIVE_STEP,
-  CREATE_STEP,RECEIVE_ERRORS,
-  CLEAR_ERRORS} from "../actions/step_actions";
+  CREATE_STEP,RECEIVE_STEP_ERRORS,
+  CLEAR_STEP_ERRORS} from "../actions/step_actions";
 import {merge} from 'lodash';
 
 const stepReducer = (state = {errors: []}, action) => {
@@ -14,9 +14,9 @@ const stepReducer = (state = {errors: []}, action) => {
     case CREATE_STEP:
       step = action.step;
       return merge({}, state, {step});
-    case RECEIVE_ERRORS:
+    case RECEIVE_STEP_ERRORS:
       return merge({}, state, action.errors);
-    case CLEAR_ERRORS:
+    case CLEAR_STEP_ERRORS:
       return [];
     default:
       return state;

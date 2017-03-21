@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getStep, makeStep, clearErrors } from '../../actions/step_actions';
+import { getStep, makeStep, clearStepErrors } from '../../actions/step_actions';
 import StepForm from './step_form';
 import _ from 'lodash';
 
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     makeStep: step => dispatch(makeStep(step)),
-    clearErrors: () => dispatch(clearErrors)
+    clearStepErrors: () => dispatch(clearStepErrors)
   };
 };
 

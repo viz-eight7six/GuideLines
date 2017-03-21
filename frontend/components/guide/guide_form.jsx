@@ -26,7 +26,7 @@ class GuideForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-      this.props.clearErrors();
+      this.props.clearGuideErrors();
   }
 
   handleSubmit(e) {

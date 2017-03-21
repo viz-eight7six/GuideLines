@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getGuide, makeGuide, clearErrors } from '../../actions/guide_actions';
+import { getGuide, makeGuide, clearGuideErrors } from '../../actions/guide_actions';
 import GuideForm from './guide_form';
 import { makeStep } from '../../actions/step_actions';
 import _ from 'lodash';
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     makeGuide: guide => dispatch(makeGuide(guide)),
-    clearErrors: () => dispatch(clearErrors),
+    clearGuideErrors: () => dispatch(clearGuideErrors),
     makeStep: step => dispatch(makeStep(step))
   };
 };

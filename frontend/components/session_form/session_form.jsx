@@ -8,7 +8,7 @@ class SessionForm extends React.Component {
           username: "",
           password: ""
       };
-      this.loginDemoUser = this.loginDemoUser.bind(this)
+      this.loginDemoUser = this.loginDemoUser.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -24,6 +24,7 @@ class SessionForm extends React.Component {
 
   redirectIfLoggedIn(){
     if (this.props.loggedIn){
+      this.props.clearErrors();
       return this.props.router.push('/');
     }
   }
@@ -69,6 +70,7 @@ class SessionForm extends React.Component {
     const demoUser = {
       username: "demo_user", password: "password"
     };
+    this.props.clearErrors();
     this.props.login(demoUser);
   }
 

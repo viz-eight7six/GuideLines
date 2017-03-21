@@ -4,8 +4,8 @@ import {hashHistory} from "react-router";
 export const RECEIVE_ALL_STEPS = "RECEIVE_ALL_STEPS";
 export const RECEIVE_STEP = "RECEIVE_STEP";
 export const CREATE_STEP = "CREATE_STEP";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
-export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const RECEIVE_STEP_ERRORS = "RECEIVE_STEP_ERRORS";
+export const CLEAR_STEP_ERRORS = "CLEAR_STEP_ERRORS";
 
 export const receiveAllSteps = (steps) => ({
   type: RECEIVE_ALL_STEPS,
@@ -19,12 +19,12 @@ export const createStep = (step) => ({
   type: CREATE_STEP,
   step
 });
-export const receiveErrors = (errors) => ({
-  type: RECEIVE_ERRORS,
+export const receiveStepErrors = (errors) => ({
+  type: RECEIVE_STEP_ERRORS,
   errors
 });
-export const clearErrors = () => ({
-  type: CLEAR_ERRORS
+export const clearStepErrors = () => ({
+  type: CLEAR_STEP_ERRORS
 });
 
 export const getAllSteps = () => dispatch => (
@@ -35,16 +35,16 @@ export const getAllSteps = () => dispatch => (
 export const getStep = (id) => dispatch => (
   stepApi.fetchStep(id).then(step =>
     dispatch(receiveStep(step)),
-      errors => dispatch(receiveErrors(errors.responseJSON)))
+      errors => dispatch(receiveStepErrors(errors.responseJSON)))
 );
 export const makeStep = (newStep) => dispatch => (
   stepApi.createStep(newStep).then(step =>
     dispatch(receiveStep(step)),
-      errors => dispatch(receiveErrors(errors.responseJSON)))
+      errors => dispatch(receiveStepErrors(errors.responseJSON)))
       // .then((step) => hashHistory.push(`/steps/${step.id}`))
 );
 export const removeStep = () => dispatch => (
   stepApi.deleteStep().then(step =>
     dispatch(receiveStep(null)),
-      errors => dispatch(receiveErrors(errors.responseJSON)))
+      errors => dispatch(receiveStepErrors(errors.responseJSON)))
 );

@@ -1,6 +1,6 @@
 import {RECEIVE_ALL_GUIDES, RECEIVE_GUIDE,
-  CREATE_GUIDE,RECEIVE_ERRORS,
-  CLEAR_ERRORS} from "../actions/guide_actions";
+  CREATE_GUIDE,RECEIVE_GUIDE_ERRORS,
+  CLEAR_GUIDE_ERRORS} from "../actions/guide_actions";
 import {merge} from 'lodash';
 
 const guideReducer = (state = {errors: []}, action) => {
@@ -14,10 +14,11 @@ const guideReducer = (state = {errors: []}, action) => {
     case CREATE_GUIDE:
       guide = action.guide;
       return merge({}, state, {guide});
-    case RECEIVE_ERRORS:
+    case RECEIVE_GUIDE_ERRORS:
       return merge({}, state, action.errors);
-    case CLEAR_ERRORS:
-      return [];
+    case CLEAR_GUIDE_ERRORS:
+      let newGuide = merge({}, state);
+      return Object.assign(newGuide, {errors:[]});
     default:
       return state;
   }

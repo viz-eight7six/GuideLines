@@ -5,10 +5,9 @@ import GuideShow from './guide_show';
 import _ from 'lodash';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return (
     {
-    guide: state.guide.guides[ownProps.params.guideId] || {
+    guide: state.guide.guide || {
       owner: "", steps: [], photo_url: "", id: 0, title: "", body: ''
     }
   });
