@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
           username: "",
           password: ""
       };
+      this.loginDemoUser = this.loginDemoUser.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -64,6 +65,13 @@ class SessionForm extends React.Component {
     return redirectLink;
   }
 
+  loginDemoUser(){
+    const demoUser = {
+      username: "demo_user", password: "password"
+    };
+    this.props.login(demoUser);
+  }
+
   render() {
     return (
       <div className="login-wrapper">
@@ -91,7 +99,9 @@ class SessionForm extends React.Component {
             <br/>
           </div>
           <input type="submit" value={this.props.formType}></input>
+          <input type="button" value="Demo" onClick={this.loginDemoUser}></input>
         </form>
+
         <div className="login-footer-bar">
           {this.renderFooterLink()}
         </div>

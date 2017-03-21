@@ -8,6 +8,20 @@ class Api::GuidesController < ApplicationController
     @guide = Guide.new(guide_params)
     @guide.author_id = current_user.id
     if @guide.save
+      @steps = params[:guide][:steps]
+      if @steps
+        @steps = @steps.values
+        @steps.each do |step|
+          @step = Step.new(step)
+          @step.guide_id = @guide.id
+          unless @step.save
+            render(
+            json: {errors: @step.errors.full_messages},
+            status: 401
+            )
+          end
+        end
+      end
       render "api/guides/show"
     else
       render(
@@ -44,6 +58,10 @@ class Api::GuidesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit(:title, :body)
+    params.require(:guide).permit(:title, :body, :steps)
+  end
+
+  def guide_only_params
+    guide_params
   end
 end

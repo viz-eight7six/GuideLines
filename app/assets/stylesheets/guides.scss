@@ -2,32 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .guide-header-bar {
-  font-size: 18px;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  border: 1px grey;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   min-width: 635px;
   text-align: center;
+  font-family: 'Baloo Bhaina', cursive;
+  font-size: 25px;
 }
 
 .guide-form-container{
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#f7f7f7 0%, #c1ceb0 90%),
-   linear-gradient(to right, #ff6a00 0%, #520f0f 50%),
-    url(flowers.jpg) 40px,
-    url(flowers.jpg) 40px;
-  background-blend-mode: screen, difference, lighten;
-  background-position: top left;
-  background-repeat: no-repeat;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  background: #ffffff;
   margin-left: 20px;
   margin-right: 20px;
-  padding-bottom: 100px;
   min-width: 635px;
   border-radius: 5px;
 }
@@ -36,7 +27,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid gray;
+  background-color: #e0e0de;
   border-radius: 5px;
   margin: 5px;
   padding: 10px;
@@ -45,28 +36,26 @@
 .string-input {
   width: 100%;
   padding: 12px 20px;
+  background-color: white;
   margin: 8px 0;
-  border: 1px solid grey;
   box-sizing: border-box;
   border-radius: 5px;
 }
 .textarea-input {
 	width: 100%;
 	height: 120px;
-	border: 1px solid grey;
+  background-color: white;
 	padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 5px;
   resize: none;
-
 }
 
 .guide-form-box > input[type=submit] {
-  width: 100%;
+  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
-  border: 1px solid black;
-  background-color: orange;
+  background-color: #f8aa2b;
   box-sizing: border-box;
   border-radius: 5px;
   text-align: center;
@@ -82,3 +71,106 @@
 //   box-sizing: border-box;
 //   border-radius: 5px;
 // }
+
+.guide-show-header {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  min-width: 635px;
+  text-align: center;
+  font-family: 'Baloo Bhaina', cursive;
+  font-size: 25px;
+  background-color: #f9f9f9;
+}
+
+.guide-show-header > h2 {
+  font-size: 18px;
+}
+
+.guide-full-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 635px;
+  border-radius: 5px;
+}
+
+.guide-body{
+  display: flex;
+  flex-direction: row;
+  background: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 635px;
+  border-radius: 5px;
+}
+
+
+.guide-show-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  width: 75%;
+}
+
+.guide-show-container > ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.steps-show {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.guide-show-container > h1 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.guide-creator-info-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  width: 25%;
+  height: 25%;
+}
+
+.guide-form-box > input[type=button] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #f8aa2b;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  font-size: 18px;
+  cursor: pointer
+}
+
+.step-form > input[type=button] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #f8aa2b;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  font-size: 18px;
+  cursor: pointer
+}

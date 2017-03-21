@@ -18,7 +18,7 @@
  @import "./guides.scss";
  @import "./components/nav.scss";
  @import "./components/login.scss";
- @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Meera+Inimai');
+ @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Meera+Inimai|Baloo+Bhaina');
 
  body {
    background-color: #F0F8FF;
@@ -56,6 +56,27 @@
 
  .guide-list-container > ul > li {
    margin: 10px;
+ }
+
+ .guide-index-item-container {
+   display: flex;
+   flex-direction: column;
+   background-color: #f5f5f5;
+   font-size: 18px;
+ }
+
+ .guide-index-item-container > h2{
+   font-size: 14px;
+ }
+ .guide-index-img {
+   height: 200px;
+   width: 200px;
+ }
+
+ .guide-link:hover {
+   text-decoration-line: underline;
+   text-decoration-color: blue;
+   cursor: pointer;
  }
 
  // / login-wrapper

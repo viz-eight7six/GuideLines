@@ -37,3 +37,6 @@ module.exports = {
   },
   devtool: 'source-maps'
 };
+
+//run  heroku run rake db:migrate
+//run heroku run rake db:seed

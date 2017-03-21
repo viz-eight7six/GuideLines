@@ -6,6 +6,9 @@ class StepForm extends React.Component {
       super(props);
       this.state = this.props.step;
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.returnStep = this.returnStep.bind(this);
+      this.update = this.update.bind(this);
+      this.setState = this.setState.bind(this);
   }
 
   componentDidUpdate(){
@@ -20,14 +23,14 @@ class StepForm extends React.Component {
     }
   }
 
-  componentWillReceiveProps(newProps) {
-      this.props.clearErrors();
-  }
+  // componentWillReceiveProps(newProps) {
+  //     this.props.clearErrors();
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
-    const step = Object.assign({}, this.state);
-    this.props.makeStep(step);
+    const step =  {step:{title: this.state.title, body: this.state.body}};
+    this.props.makeStep({step});
     // this.props.router.push('/steps');
   }
 
@@ -37,30 +40,24 @@ class StepForm extends React.Component {
     });
   }
 
-  renderErrors(){
-    if(this.props.errors){
-      let errors = this.props.errors.map((error, i) => (
-        <li key={i} className='errors'>{error}</li>
-      ));
-      return (
-        <ul>
-          {errors}
-        </ul>
-      );
-    }
-  }
-  // renderFooterLink(){
-  //   let redirectLink;
-  //   if(this.props.formType === 'step'){
-  //     redirectLink = (<Link to='/signup'>Sign Up</Link>);
+  // renderErrors(){
+  //   if(this.props.errors){
+  //     let errors = this.props.errors.map((error, i) => (
+  //       <li key={i} className='errors'>{error}</li>
+  //     ));
+  //     return (
+  //       <ul>
+  //         {errors}
+  //       </ul>
+  //     );
   //   }
-  //   else{
-  //     redirectLink = (<label>Already a member? &nbsp; &nbsp;
-  //       <Link to='/step'>Log In</Link>
-  //       </label>);
-  //   }
-  //   return redirectLink;
   // }
+
+  returnStep () {
+    let step = this.state;
+    return this.props.updateSteps(this.state);
+  }
+
 
   render() {
     return (
@@ -69,8 +66,7 @@ class StepForm extends React.Component {
           <h1 className="step-form-header">New Step</h1>
         </div>
         <div className="step-form-container">
-        <form className="step-form-box"
-          onSubmit={this.handleSubmit}>
+        <form className="step-form-box">
           <div className="step-form">
             <label>
               <input type="text" className="string-input" value={this.state.title}
@@ -86,16 +82,17 @@ class StepForm extends React.Component {
                 placeholder='Description'
                 />
             </label>
-            {this.renderErrors()}
             <br/>
+            <input type="button" onClick={this.returnStep} value="save step"></input>
           </div>
-          <input type="submit" value='Create Step'></input>
         </form>
       </div>
     </div>
     );
   }
 
+  // {this.renderErrors()}
+  // <input type="submit" value='Create Step'></input>
 
   //...
 }

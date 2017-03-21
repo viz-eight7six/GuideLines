@@ -1,9 +1,9 @@
 .main-nav {
 display: flex;
 justify-content: space-between;
-padding-top: 10px;
-padding-bottom: 10px;
-background-color: #F5F5F5;
+padding-top: 20px;
+padding-bottom: 20px;
+background-color: #e0e0de;
 }
 
 .left-nav,
@@ -31,4 +31,18 @@ background-color: #F5F5F5;
 .right-nav > ul > Link {
   cursor: pointer;
 
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+
+.logo {
+  background-image: url(robot.png);
+  background-size: 15px 15px;
 }

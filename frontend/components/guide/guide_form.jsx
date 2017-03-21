@@ -7,6 +7,10 @@ class GuideForm extends React.Component {
       super(props);
       this.state = this.props.guide;
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.addStep = this.addStep.bind(this);
+      this.update = this.update.bind(this);
+      this.updateSteps = this.updateSteps.bind(this);
+      this.setState = this.setState.bind(this);
   }
 
   componentDidUpdate(){
@@ -29,7 +33,15 @@ class GuideForm extends React.Component {
     e.preventDefault();
     const guide = Object.assign({}, this.state);
     this.props.makeGuide(guide);
-    // this.props.router.push('/guides');
+  }
+
+  addStep(e) {
+    console.log("we preseed it");
+    e.preventDefault();
+    let newStep = {title: "", body: ""};
+    let newStepArray = this.state.steps;
+    newStepArray.push(newStep);
+    this.setState({steps: newStepArray});
   }
 
   update(property) {
@@ -37,6 +49,20 @@ class GuideForm extends React.Component {
       [property]: e.target.value
     });
   }
+
+  updateSteps(step) {
+    let newArr = [];
+    if(this.state.steps){
+      newArr = this.state.steps;
+    }
+    newArr.pop();
+    newArr.push(step);
+    this.setState({
+      steps: newArr
+    });
+  }
+
+
 
   renderErrors(){
     if(this.props.errors){
@@ -51,8 +77,11 @@ class GuideForm extends React.Component {
     }
   }
 
-  renderStep(){
-
+  renderStepForm(){
+    const steps = this.state.steps.map((step, i) => (
+      <StepFormContainer key={i} updateSteps={this.updateSteps}/>
+    ));
+    return steps;
   }
 
   // renderFooterLink(){
@@ -95,6 +124,9 @@ class GuideForm extends React.Component {
             {this.renderErrors()}
             <br/>
           </div>
+          {this.renderStepForm()}
+          <br/>
+          <input type="button" onClick={this.addStep} value="Add Step"></input>
           <input type="submit" value='Create Guide'></input>
         </form>
       </div>

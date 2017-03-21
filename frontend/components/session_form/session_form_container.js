@@ -14,11 +14,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
     processForm: (user) => dispatch(processForm(user)),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    login: (user) => dispatch(login(user))
   };
 };
-
-
 
 export default connect(
   mapStateToProps,

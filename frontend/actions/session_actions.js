@@ -20,12 +20,14 @@ export const login = user => dispatch => (
   sessionApi.login(user).then(currentUser =>
     dispatch(receiveCurrentUser(currentUser)),
       errors => dispatch(receiveErrors(errors.responseJSON)))
+        .then(() => dispatch(clearErrors()))
 );
 
 export const signup = user => dispatch => (
   sessionApi.signup(user).then(currentUser =>
     dispatch(receiveCurrentUser(currentUser)),
       errors => dispatch(receiveErrors(errors.responseJSON)))
+        .then(() => dispatch(clearErrors()))
 );
 
 export const logout = () => dispatch => (

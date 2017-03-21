@@ -4,9 +4,15 @@ import { getGuide } from '../../actions/guide_actions';
 import GuideShow from './guide_show';
 import _ from 'lodash';
 
-const mapStateToProps = (state, ownProps) => ({
-  guide: state.guide.guides[ownProps.params.guideId]
-});
+const mapStateToProps = (state, ownProps) => {
+  debugger
+  return (
+    {
+    guide: state.guide.guides[ownProps.params.guideId] || {
+      owner: "", steps: [], photo_url: "", id: 0, title: "", body: ''
+    }
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   getGuide: (id) => dispatch(getGuide(id)),

@@ -60,9 +60,7 @@
   width: 250px;
   margin-left: 20px;
   margin-top: 20px;
-  border: 1px solid lightgrey ;
-  border-bottom: none;
-  background-color: #FFF;
+  background-color: #d4e1e7;
   padding: 20px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -73,7 +71,6 @@
   width: 250px;
   margin-left: 20px;
   background-color: #F5F5F5;
-  border: 1px solid lightgrey;
   border-top: none;
   padding: 20px;
   margin-left: 20px;
@@ -89,18 +86,20 @@
   font-size: 12px;
 }
 
- input[type=text] {
+ .login-form > label >input[type=text] {
    width: 100%;
    padding: 12px 20px;
    margin: 8px 0;
    border: 1px solid grey;
    box-sizing: border-box;
+   background-color: #FFFFBD;
    border-radius: 5px;
 }
  input[type=password] {
    width: 100%;
    padding: 12px 20px;
    margin: 8px 0;
+   background-color: #FFFFBD;
    border: 1px solid grey;
    box-sizing: border-box;
    border-radius: 5px;
@@ -109,12 +108,25 @@
    width: 100%;
    padding: 12px 20px;
    margin: 8px 0;
-   border: 1px solid black;
-   background-color: orange;
+   background-color: #f8aa2b;
    box-sizing: border-box;
    border-radius: 5px;
    text-align: center;
    text-transform: capitalize;
    color: white;
    font-size: 18px;
+ }
+
+ .login-form-box > input[type=button] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   background-color: #f8aa2b;
+   box-sizing: border-box;
+   border-radius: 5px;
+   text-align: center;
+   text-transform: capitalize;
+   color: white;
+   font-size: 18px;
+   cursor: pointer
  }

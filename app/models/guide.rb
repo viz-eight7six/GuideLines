@@ -2,6 +2,8 @@ class Guide < ApplicationRecord
 
   validates :title, :body, :owner, presence: true
 
+  # accepts_nested_attributes_for :steps
+
   belongs_to :owner,
   class_name: :User,
   primary_key: :id,

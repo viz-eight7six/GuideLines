@@ -7,8 +7,9 @@ import _ from 'lodash';
 const mapStateToProps = (state, ownProps) => {
   let step = { title: "", body: "" };
   let loggedIn = Boolean(state.session.currentUser);
-  let errors = state.step.errors;
-  return { step, loggedIn, errors};
+  // let errors = state.step.errors;
+  let updateSteps = ownProps.updateSteps;
+  return { step, loggedIn, updateSteps};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

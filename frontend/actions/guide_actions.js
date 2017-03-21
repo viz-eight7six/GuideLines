@@ -41,7 +41,7 @@ export const makeGuide = (newGuide) => dispatch => (
   guideApi.createGuide(newGuide).then(guide =>
     dispatch(receiveGuide(guide)),
       errors => dispatch(receiveErrors(errors.responseJSON)))
-      .then((guide) => hashHistory.push(`/guides/${guide.id}`))
+      .then(res => hashHistory.push(`/guides/${res.guide.id}`))
 );
 export const removeGuide = () => dispatch => (
   guideApi.deleteGuide().then(guide =>
