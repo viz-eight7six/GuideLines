@@ -1,1 +1,1 @@
-json.extract! guide, :id, :title, :body, :steps, :owner, :photo_url, :comments
+json.extract! guide, :id, :title, :body, :steps, :owner, :photo_url

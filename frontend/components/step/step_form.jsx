@@ -17,7 +17,6 @@ class StepForm extends React.Component {
   }
 
 
-
   redirectIfNotLoggedIn(){
     if (!this.props.loggedIn){
       return this.props.router.push('/login');
@@ -54,12 +53,18 @@ class StepForm extends React.Component {
   //   }
   // }
 
+  componentWillReceiveProps(nextProps){
+    if (this.props !== nextProps){
+      this.setState(nextProps.step);
+    }
+  }
+
   returnStep () {
     return this.props.updateSteps(this.state, this.props.id);
   }
 
   removeStep () {
-    return this.props.deleteStep(this.props.id);
+    this.props.deleteStep(this.props.id);
   }
 
 

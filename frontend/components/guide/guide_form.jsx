@@ -83,6 +83,7 @@ class GuideForm extends React.Component {
   renderStepForm(){
     const steps = this.tempSteps.map((step, idx) => (
       <StepFormContainer key={idx} id={idx}
+        step={step}
         updateSteps={this.updateSteps}
         deleteStep={this.deleteStep}/>
     ));
