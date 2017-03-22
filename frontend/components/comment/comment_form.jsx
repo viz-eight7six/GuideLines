@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-class StepForm extends React.Component {
+class CommentForm extends React.Component {
   constructor(props) {
       super(props);
-      this.state = this.props.step;
+      this.state = this.props.comment;
+      this.state.guide_id = this.props.gid;
       this.handleSubmit = this.handleSubmit.bind(this);
-      this.returnStep = this.returnStep.bind(this);
       this.update = this.update.bind(this);
       this.setState = this.setState.bind(this);
-      this.removeStep = this.removeStep.bind(this);
   }
 
   componentDidUpdate(){
-    return this.returnStep();
   }
 
 
@@ -25,14 +23,14 @@ class StepForm extends React.Component {
   }
 
   // componentWillReceiveProps(newProps) {
-  //     this.returnStep();
+  //     this.returnComment();
   // }
 
   handleSubmit(e) {
     e.preventDefault();
-    const step =  {step:{title: this.state.title, body: this.state.body}};
-    this.props.makeStep({step});
-    // this.props.router.push('/steps');
+    const comment = this.state;
+    this.props.makeComment(comment);
+    // this.props.router.push('/comments');
   }
 
   update(property) {
@@ -54,31 +52,24 @@ class StepForm extends React.Component {
   //   }
   // }
 
-  returnStep () {
-    return this.props.updateSteps(this.state, this.props.id);
-  }
-
-  removeStep () {
-    return this.props.deleteStep(this.props.id);
-  }
+  // returnComment () {
+  //   return this.props.updateComments(this.state, this.props.id);
+  // }
+  //
+  // removeComment () {
+  //   return this.props.deleteComment(this.props.id);
+  // }
 
 
   render() {
     return (
-      <div className="step-form-wrapper">
-        <div className="step-header-bar">
-          <h1 className="step-form-header">Step {this.props.id + 1}</h1>
+      <div className="comment-form-wrapper">
+        <div className="comment-header-bar">
+          <h1 className="comment-form-header">Comment {this.props.id + 1}</h1>
         </div>
-        <div className="step-form-container">
-        <form className="step-form-box">
-          <div className="step-form">
-            <label>
-              <input type="text" className="string-input" value={this.state.title}
-                onChange={this.update('title')}
-                placeholder='Title'
-                />
-            </label>
-            <br/>
+        <div className="comment-form-container">
+        <form className="comment-form-box" onSubmit={this.handleSubmit}>
+          <div className="comment-form">
             <label>
               <br/>
               <textarea className="textarea-input" value={this.state.body}
@@ -88,17 +79,18 @@ class StepForm extends React.Component {
             </label>
             <br/>
           </div>
-          <input type="button" onClick={this.removeStep} value="remove step"></input>
+          <input type="submit" value="Submit Comment"></input>
         </form>
+        <input type="button" onClick={this.removeComment} value="remove comment"></input>
       </div>
     </div>
     );
   }
 
   // {this.renderErrors()}
-  // <input type="submit" value='Create Step'></input>
+  // <input type="submit" value='Create Comment'></input>
 
   //...
 }
 
-export default (StepForm);
+export default (CommentForm);

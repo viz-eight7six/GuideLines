@@ -43,40 +43,8 @@
    background-repeat: no-repeat;
  }
 
- .guide-list-container {
-   display: flex;
-   flex-wrap: wrap;
-   margin: 50px;
- }
 
- .guide-list-container > ul {
-   display: flex;
-   flex-wrap: wrap;
- }
-
- .guide-list-container > ul > li {
-   margin: 10px;
- }
-
- .guide-index-item-container {
-   display: flex;
-   flex-direction: column;
-   background-color: #f5f5f5;
-   font-size: 18px;
- }
-
- .guide-index-item-container > h2{
-   font-size: 14px;
- }
- .guide-index-img {
-   height: 200px;
-   width: 200px;
- }
-
- .guide-link:hover {
-   text-decoration-line: underline;
-   text-decoration-color: blue;
-   cursor: pointer;
- }
-
+.comments-show > img {
+  size: 42px 42px;
+}
  // / login-wrapper

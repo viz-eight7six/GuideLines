@@ -11,6 +11,8 @@ class GuideForm extends React.Component {
       this.update = this.update.bind(this);
       this.updateSteps = this.updateSteps.bind(this);
       this.setState = this.setState.bind(this);
+      this.tempSteps = this.props.guide.steps || [];
+      this.deleteStep = this.deleteStep.bind(this);
   }
 
   componentDidUpdate(){
@@ -32,16 +34,15 @@ class GuideForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const guide = Object.assign({}, this.state);
+    this.setSteps();
     this.props.makeGuide(guide);
   }
 
   addStep(e) {
-    console.log("we preseed it");
     e.preventDefault();
     let newStep = {title: "", body: ""};
-    let newStepArray = this.state.steps;
-    newStepArray.push(newStep);
-    this.setState({steps: newStepArray});
+    this.tempSteps.push(newStep);
+    this.setState({steps: this.tempSteps});
   }
 
   update(property) {
@@ -50,18 +51,20 @@ class GuideForm extends React.Component {
     });
   }
 
-  updateSteps(step) {
-    let newArr = [];
-    if(this.state.steps){
-      newArr = this.state.steps;
-    }
-    newArr.pop();
-    newArr.push(step);
+  updateSteps(step, i) {
+    this.tempSteps.splice(i, 1, step);
+  }
+
+  setSteps() {
     this.setState({
-      steps: newArr
+      steps: this.tempSteps
     });
   }
 
+  deleteStep(i) {
+    this.tempSteps.splice(i, 1);
+    this.setSteps();
+  }
 
 
   renderErrors(){
@@ -78,8 +81,10 @@ class GuideForm extends React.Component {
   }
 
   renderStepForm(){
-    const steps = this.state.steps.map((step, i) => (
-      <StepFormContainer key={i} updateSteps={this.updateSteps}/>
+    const steps = this.tempSteps.map((step, idx) => (
+      <StepFormContainer key={idx} id={idx}
+        updateSteps={this.updateSteps}
+        deleteStep={this.deleteStep}/>
     ));
     return steps;
   }

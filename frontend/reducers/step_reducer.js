@@ -17,7 +17,8 @@ const stepReducer = (state = {errors: []}, action) => {
     case RECEIVE_STEP_ERRORS:
       return merge({}, state, action.errors);
     case CLEAR_STEP_ERRORS:
-      return [];
+    let newGuide = merge({}, state);
+    return Object.assign(newGuide, {errors:[]});
     default:
       return state;
   }

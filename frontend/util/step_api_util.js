@@ -1,7 +1,7 @@
 export const fetchSteps = () => (
   $.ajax({
     method: "GET",
-    url: "api/guides"
+    url: "api/steps"
   })
 );
 export const fetchStep = (id) => (
