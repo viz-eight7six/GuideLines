@@ -14,6 +14,7 @@ export default class ContactForm extends React.Component {
     this.state = {
       uploadedFileCloudinaryUrl: ''
     };
+    this.returnUrl = this.returnUrl.bind(this);
   }
 
   onImageDrop(files) {
@@ -22,6 +23,7 @@ export default class ContactForm extends React.Component {
     });
 
     this.handleImageUpload(files[0]);
+    this.returnUrl();
   }
 
   handleImageUpload(file) {
@@ -40,6 +42,10 @@ export default class ContactForm extends React.Component {
         });
       }
     });
+  }
+
+  returnUrl(){
+    this.props.getPhotoUrl(this.state.uploadedFileCloudinaryUrl);
   }
 
 

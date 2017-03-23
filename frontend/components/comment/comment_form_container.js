@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import { getComment, makeComment, clearCommentErrors } from '../../actions/comment_actions';
+import { getComment, clearCommentErrors } from '../../actions/comment_actions';
 import CommentForm from './comment_form';
+import {createComment} from '../../actions/guide_actions';
 import _ from 'lodash';
 
 
@@ -14,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    makeComment: comment => dispatch(makeComment(comment)),
+    createComment: comment => dispatch(createComment(comment)),
     clearCommentErrors: () => dispatch(clearCommentErrors)
   };
 };

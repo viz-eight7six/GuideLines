@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
   primary_key: :id,
   foreign_key: :author_id
 
+  has_many :photos
+
 	def password=(password)
     @password = password
 		self.password_digest = BCrypt::Password.create(password)

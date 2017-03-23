@@ -7,7 +7,9 @@ import _ from 'lodash';
 const mapStateToProps = (state, ownProps) => {
   return (
     {
-    guide: state.guide.guides[ownProps.params.guideId] || state.guide.guide
+    guide: state.guide.guides[ownProps.params.guideId] || state.guide.guide,
+    comments: state.guide.guides[ownProps.params.guideId].comments,
+    newComment: state.comment.comment
   });
 };
 

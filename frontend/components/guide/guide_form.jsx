@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import StepFormContainer from '../step/step_form_container';
+import PhotoFormContainer from "../photo/photo_form_container";
 
 class GuideForm extends React.Component {
   constructor(props) {
@@ -104,11 +105,26 @@ class GuideForm extends React.Component {
   // }
 
   render() {
+    let photos;
+    if(this.props.currentUser.photos){
+      this.props.currentUser.photos.map((photo, idx) => (
+
+        <li>
+          <img src={photo.url}/>
+        </li>
+      ));
+    }
     return (
       <div className="guide-form-wrapper">
         <div className="guide-header-bar">
           <h1 className="guide-form-header">New Guide</h1>
         </div>
+        <nav>
+          <ul>
+            {photos}
+          </ul>
+          <PhotoFormContainer/>
+        </nav>
         <div className="guide-form-container">
         <form className="guide-form-box"
           onSubmit={this.handleSubmit}>

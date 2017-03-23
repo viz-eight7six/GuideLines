@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :guides, only: [:create, :index, :destroy, :show, :update]
     resources :steps
     resources :comments
+    resources :photos
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

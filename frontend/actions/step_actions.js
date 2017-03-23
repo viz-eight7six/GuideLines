@@ -1,6 +1,7 @@
 import * as stepApi from "../util/step_api_util";
 import {hashHistory} from "react-router";
 
+
 export const RECEIVE_ALL_STEPS = "RECEIVE_ALL_STEPS";
 export const RECEIVE_STEP = "RECEIVE_STEP";
 export const CREATE_STEP = "CREATE_STEP";

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class CommentForm extends React.Component {
   }
 
   componentDidUpdate(){
+
   }
 
 
@@ -29,8 +30,8 @@ class CommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const comment = this.state;
-    this.props.makeComment(comment);
-    // this.props.router.push('/comments');
+    this.props.createComment(comment);
+    this.props.router.push(`/guides/${this.state.guide_id}`);
   }
 
   update(property) {
@@ -65,7 +66,7 @@ class CommentForm extends React.Component {
     return (
       <div className="comment-form-wrapper">
         <div className="comment-header-bar">
-          <h1 className="comment-form-header">Comment {this.props.id + 1}</h1>
+          <h1 className="comment-form-header">Write a Comment</h1>
         </div>
         <div className="comment-form-container">
         <form className="comment-form-box" onSubmit={this.handleSubmit}>
@@ -73,15 +74,14 @@ class CommentForm extends React.Component {
             <label>
               <br/>
               <textarea className="textarea-input" value={this.state.body}
-                onChange={this.update('body')}
+                  onChange={this.update('body')}
                 placeholder='Description'
                 />
             </label>
             <br/>
+            <input type="submit" value="Submit Comment"></input>
           </div>
-          <input type="submit" value="Submit Comment"></input>
         </form>
-        <input type="button" onClick={this.removeComment} value="remove comment"></input>
       </div>
     </div>
     );
@@ -93,4 +93,4 @@ class CommentForm extends React.Component {
   //...
 }
 
-export default (CommentForm);
+export default withRouter(CommentForm);

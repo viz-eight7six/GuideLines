@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   let guide = { title: "", body: "", steps: []};
   let loggedIn = Boolean(state.session.currentUser);
   let errors = state.guide.errors;
-  return { guide, loggedIn, errors};
+  let currentUser = state.session.currentUser;
+  return { guide, loggedIn, errors, currentUser};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

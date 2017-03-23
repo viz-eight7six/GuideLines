@@ -4,8 +4,19 @@ import CommentFormContainer from "../comment/comment_form_container";
 
 class GuideShow extends React.Component {
 
+  constructor(props){
+    super(props);
+    this.state = props;
+  }
+
   componentDidMount(){
     this.props.getGuide(this.props.guide.id);
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(this.props.newComment !== nextProps.newComment){
+      this.props.getGuide(this.props.guide.id);
+    }
   }
 
   // componentDidUpdate(){
@@ -26,15 +37,23 @@ render(){
         );
     });
   }
-  let comments = <h1></h1>;
+  let comments;
   if(this.props.guide.comments){
-    debugger
     comments = this.props.guide.comments.map((comment, idx) => {
         return (
-          <li key={idx} className="comments-show">
-            <img src={comment.author.photo_url}/><br/>
-            <h1> {comment.author}</h1>
-            <br/>{comment.body}
+          <li key={idx} >
+            <div className="comment-head">
+              <div>
+                <img className="comment-user-img" src={comment.author.photo_url}/>
+                <h1> {comment.author.username}</h1>
+              </div>
+              <div>
+                <h1> {comment.created_at} </h1>
+              </div>
+            </div>
+            <div>
+              <h1>{comment.body}</h1>
+            </div>
           </li>
         );
     });
@@ -47,21 +66,25 @@ render(){
       </div>
       <div className="guide-body">
         <div className="guide-show-container">
-          <br/>
-          <img src={this.props.guide.photo_url}/>
-          <br/>
-          {this.props.guide.body}
-          <br/>
-          <ul>
-            {steps}
-          </ul>
-          <br/>
-          <ul>
-            {comments}
-          </ul>
-          <div>
-            <CommentFormContainer gid={this.props.guide.id}/>
-          </div>
+          <span className="guide-show">
+            <br/>
+            <img src={this.props.guide.photo_url}/>
+            <br/>
+            {this.props.guide.body}
+            <br/>
+            <ul>
+              {steps}
+            </ul>
+          </span>
+          <span className="comments-show-container">
+            <div className="comment-form-container">
+              <CommentFormContainer gid={this.props.guide.id}/>
+            </div>
+            <br/>
+            <ul className="comments-show">
+              {comments}
+            </ul>
+          </span>
           <Link to="/guides">back to index</Link>
         </div>
         <div className="guide-creator-info-container">
