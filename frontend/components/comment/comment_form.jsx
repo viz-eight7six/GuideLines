@@ -26,11 +26,11 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.redirectIfNotLoggedIn();
+    // this.redirectIfNotLoggedIn();
     const comment = this.state;
     this.props.createComment(comment);
     this.setState({body: ""});
-    this.props.router.push(`/guides/${this.state.guide_id}`);
+    // this.props.router.push(`/guides/${this.state.guide_id}`);
   }
 
   update(property) {

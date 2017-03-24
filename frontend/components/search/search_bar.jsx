@@ -1,6 +1,5 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-import { searchGuides } from "../../actions/search_actions";
 
 class SearchBar extends React.Component {
   constructor (props) {
@@ -19,10 +18,15 @@ class SearchBar extends React.Component {
     };
   }
 
+  clearForm() {
+    this.setState({inputVal: ""});
+  }
+
   handleSubmit (e) {
     e.preventDefault();
     this.props.searchGuides(this.state.inputVal);
-    return hashHistory.push("/");
+    hashHistory.push('/');
+    return this.clearForm();
   }
 
   render () {
@@ -30,7 +34,8 @@ class SearchBar extends React.Component {
       <div>
       <form className="Search-Bar-form">
         <label className="Search">
-          <input className="Search-Input" type="text" onChange={this.update('inputVal')} placeholder = "How Do I?"/>
+          <input className="Search-Input" type="text" onChange={this.update('inputVal')}
+            placeholder = "How Do I?"/>
         </label>
         <label className="btn">
         <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>

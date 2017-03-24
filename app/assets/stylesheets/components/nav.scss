@@ -1,6 +1,7 @@
 .main-nav {
 display: flex;
 justify-content: space-between;
+align-items: center;
 padding-top: 20px;
 padding-bottom: 20px;
 background-color: #e0e0de;
@@ -27,9 +28,8 @@ background-color: #e0e0de;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-left: 15px;
   vertical-align: middle;
-  margin-left: 20px;
-  margin-top: 10px;
   font-family: 'Meera Inimai';
   font-size: 20px;
 }
@@ -68,17 +68,6 @@ background-color: #e0e0de;
 }
 
 .bottom-nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: white;
-  border-bottom: 1px solid gray;
-}
-
-.logo {
-  background-image: url(robot.png);
-  background-size: 15px 15px;
 }
 
 .bottom-nav > .btn {
