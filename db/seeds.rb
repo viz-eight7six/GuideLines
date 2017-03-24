@@ -226,3 +226,261 @@ body: "Please make more guides like this one",
 author_id: 7,
 guide_id: 2
 )
+
+
+
+items = [{
+  id: "EBT4ZRUI7MXTNDI",
+  title: "Arduino Tutorials (part one - 16 Tutorial Pack) ",
+  body: "Fri Mar 27 13:42:06 PDT 2015",
+  photo_url: "https://cdn.instructables.com/FO0/972M/IA6M4G5T/FO0972MIA6M4G5T.SQUARE2.jpg"
+},{
+  id: "EOKZEO4GQKM4SGD",
+  title: "Motorcycle Saddlebags from Ammunition Cases",
+  body: "Tue Jul 26 13:25:53 PDT 2011",
+  photo_url: "https://cdn.instructables.com/FBZ/R57R/GQKM4SKF/FBZR57RGQKM4SKF.SQUARE2.jpg"
+},{
+  id: "EL1YOTQGBOTPSCI",
+  title: "How to reupholster a recliner seat",
+  body: "Fri Jul 16 16:25:51 PDT 2010",
+  photo_url: "https://cdn.instructables.com/FJV/PP07/GBOTPSD9/FJVPP07GBOTPSD9.SQUARE2.jpg"
+},{
+  id: "E0CDZ1HG8QJNMQB",
+  title: "Painting with Colored Cement",
+  body: "Fri May 07 06:16:13 PDT 2010",
+  photo_url: "https://cdn.instructables.com/FIV/AHUG/G8TCTAJ6/FIVAHUGG8TCTAJ6.SQUARE2.jpg"
+},{
+  id: "ELA664HITCHE40O",
+  title: "Flamethrower made with Hardware Store Parts",
+  body: "Fri Sep 23 07:29:32 PDT 2016",
+  photo_url: "https://cdn.instructables.com/FRX/OW45/ITCHEUXP/FRXOW45ITCHEUXP.SQUARE2.jpg"
+},{
+  id: "EI1I4O8I1EU2KLQ",
+  title: "Tea Kettle Whistle Repair",
+  body: "Sun Oct 19 12:56:43 PDT 2014",
+  photo_url: "https://cdn.instructables.com/F5R/CUST/I1EU2PXP/F5RCUSTI1EU2PXP.SQUARE2.jpg"
+},{
+  id: "E4YN7H3IGWO2BP8",
+  title: "Salted Caramel Mocha Frappuccino Recipe",
+  body: "Mon Nov 16 11:11:01 PST 2015",
+  photo_url: "https://cdn.instructables.com/FIH/AZNC/IH0YKP33/FIHAZNCIH0YKP33.SQUARE2.jpg"
+},{
+  id: "EVDKF9PIG6TV6EC",
+  title: "Black Garlic - Probably the easiest way to make it at home!",
+  body: "Sun Oct 25 20:09:55 PDT 2015",
+  photo_url: "https://cdn.instructables.com/F2G/7WHM/IG6TVMQX/F2G7WHMIG6TVMQX.SQUARE2.jpg"
+},{
+  id: "E7IQT5AIEX4ZSSZ",
+  title: "(OUTDATED) How To Flash Windows IoT Core On Raspberry Pi 2 And Access To It Through Web Browser",
+  body: "Fri Oct 09 06:56:43 PDT 2015",
+  photo_url: "https://cdn.instructables.com/F2H/UNGR/IFISE1SR/F2HUNGRIFISE1SR.SQUARE2.jpg"
+},{
+  id: "E51VPKVFCEIOGI3",
+  title: "LED Mod Your Gameboy Color",
+  body: "Sat Feb 09 09:18:03 PST 2008",
+  photo_url: "https://cdn.instructables.com/FRT/BO30/FCEIOGFN/FRTBO30FCEIOGFN.SQUARE2.jpg"
+},{
+  id: "EP03NZPHVC1JERK",
+  title: "Create glue-less interlocking laser cut parts with sketchup slicemodeler",
+  body: "Tue Aug 26 04:22:37 PDT 2014",
+  photo_url: "https://cdn.instructables.com/FRI/MCFJ/HVC1KK5J/FRIMCFJHVC1KK5J.SQUARE2.jpg"
+},{
+  id: "EC5ZKDKFGAWEZT0",
+  title: "Easy bubble wand ",
+  body: "Sat May 17 04:21:35 PDT 2008",
+  photo_url: "https://cdn.instructables.com/FYT/BV04/FGAWEZSO/FYTBV04FGAWEZSO.SQUARE2.jpg"
+},{
+  id: "EJXPE49IR9EAEBM",
+  title: "How to Add an IR Remote to a Speaker System",
+  body: "Sun Jul 31 07:57:57 PDT 2016",
+  photo_url: "https://cdn.instructables.com/FXM/6FXE/IR9EAGKD/FXM6FXEIR9EAGKD.SQUARE2.jpg"
+},{
+  id: "ELGMV9DJ0COYC7A",
+  title: "Super Easy No-knead Sourdough Bread",
+  body: "Mon Mar 20 15:09:17 PDT 2017",
+  photo_url: "https://cdn.instructables.com/F6N/2OOG/J0IEB8S4/F6N2OOGJ0IEB8S4.SQUARE2.jpg"
+},{
+  id: "EOPV8UWINOTX34Q",
+  title: "IoT Pill Bottle",
+  body: "Mon May 02 06:31:41 PDT 2016",
+  photo_url: "https://cdn.instructables.com/FLI/R23R/INPE5NCC/FLIR23RINPE5NCC.SQUARE2.jpg"
+},{
+  id: "E92UHSBIRKFK6HO",
+  title: "Wi-fi controlled FPV rover robot (with Arduino, ESP8266 and stepper motors)",
+  body: "Fri Sep 30 11:08:01 PDT 2016",
+  photo_url: "https://cdn.instructables.com/FIX/47DD/ITPYQA8K/FIX47DDITPYQA8K.SQUARE2.jpg"
+},{
+  id: "E649GIIIC37CVV3",
+  title: "Object tracking by color with Python and openCV",
+  body: "Tue Jul 14 13:24:18 PDT 2015",
+  photo_url: "https://cdn.instructables.com/FCI/9GOP/IC37DGDN/FCI9GOPIC37DGDN.SQUARE2.jpg"
+},{
+  id: "ET7T410ILCHIT8I",
+  title: "Mp3 Play from SD Card with Arduino",
+  body: "Sun Mar 06 15:53:25 PST 2016",
+  photo_url: "https://cdn.instructables.com/FWH/5AKW/ILCHIWWP/FWH5AKWILCHIWWP.SQUARE2.jpg"
+},{
+  id: "ECQFIVOIZT6S7RP",
+  title: "WiFi Jammer Using ESP8266",
+  body: "Mon Mar 06 06:55:53 PST 2017",
+  photo_url: "https://cdn.instructables.com/F1M/3KC3/J0487G1C/F1M3KC3J0487G1C.SQUARE2.jpg"
+},{
+  id: "ES5M0M6H7430JE6",
+  title: "Arduino Night Light",
+  body: "Mon Sep 24 14:43:35 PDT 2012",
+  photo_url: "https://cdn.instructables.com/FNY/33E8/H7430JFA/FNY33E8H7430JFA.SQUARE2.jpg"
+},{
+  id: "EXF0Z2BIUHMRT2R",
+  title: "A Different Ball Turning Jig for Taig Lathe",
+  body: "Wed Oct 19 22:59:53 PDT 2016",
+  photo_url: "https://cdn.instructables.com/F6P/0U8R/IUHMS6X7/F6P0U8RIUHMS6X7.SQUARE2.jpg"
+},{
+  id: "E23TLUFJ0IEGL2L",
+  title: "DIY Router Table",
+  body: "Tue Mar 21 15:31:24 PDT 2017",
+  photo_url: "https://cdn.instructables.com/F2A/Q69L/J0IEHGOY/F2AQ69LJ0IEHGOY.SQUARE2.jpg"
+},{
+  id: "ES9Z4ROGY65PZZ7",
+  title: "Cardboard folder/creaser",
+  body: "Thu Feb 02 17:58:06 PST 2012",
+  photo_url: "https://cdn.instructables.com/F79/UEIL/GY65PZZK/F79UEILGY65PZZK.SQUARE2.jpg"
+},{
+  id: "E4PY7OCLIVEZ0R6KJA",
+  title: "Making Maple Syrup",
+  body: "Thu Mar 08 19:48:28 PST 2007",
+  photo_url: "https://cdn.instructables.com/FM5/PKCO/KEQEZ0R6KIG/FM5PKCOKEQEZ0R6KIG.SQUARE2.jpg"
+},{
+  id: "E9SZE8JGH8AGHBS",
+  title: "Kill Bedbugs in your luggage",
+  body: "Sun Dec 05 11:40:21 PST 2010",
+  photo_url: "https://cdn.instructables.com/FG1/CZEB/GH8AGHBW/FG1CZEBGH8AGHBW.SQUARE2.jpg"
+},{
+  id: "EH8TG2NIP02TKRM",
+  title: "How to Control an RGB LED Strip - Arduino Tutorial",
+  body: "Fri Jun 03 14:24:30 PDT 2016",
+  photo_url: "https://cdn.instructables.com/FHZ/L9GP/IP02U02W/FHZL9GPIP02U02W.SQUARE2.jpg"
+},{
+  id: "E9CX68DJ08EFC4F",
+  title: "Outdoor Furniture: table and bench with tapered legs",
+  body: "Thu Mar 16 12:37:17 PDT 2017",
+  photo_url: "https://cdn.instructables.com/FBF/WEE9/J0COK0VV/FBFWEE9J0COK0VV.SQUARE2.jpg"
+},{
+  id: "ECGBLCDIVO3ABT8",
+  title: "Somewhat Complete PCB Fabrication",
+  body: "Tue Mar 21 10:49:43 PDT 2017",
+  photo_url: "https://cdn.instructables.com/F3W/ZHIN/J0IEHXYT/F3WZHINJ0IEHXYT.SQUARE2.jpg"
+},{
+  id: "EWI0LB0J0IEDPBX",
+  title: "A Portable Panel Saw",
+  body: "Mon Mar 20 21:25:47 PDT 2017",
+  photo_url: "https://cdn.instructables.com/F8E/6T6Q/J0IEHIUQ/F8E6T6QJ0IEHIUQ.SQUARE2.jpg"
+},{
+  id: "EJA9AAVJ0CORDID",
+  title: "Make Your Own GPS SMS Security Tracking System",
+  body: "Sun Mar 19 08:45:14 PDT 2017",
+  photo_url: "https://cdn.instructables.com/FR1/79JC/J0CORSG0/FR179JCJ0CORSG0.SQUARE2.jpg"
+},{
+  id: "E3VX8JQJ0IEDQG8",
+  title: "Live Edge River Coffee Table | How to Build",
+  body: "Tue Mar 21 08:52:58 PDT 2017",
+  photo_url: "https://cdn.instructables.com/F4D/LXDU/J0IEE4K2/F4DLXDUJ0IEE4K2.SQUARE2.jpg"
+},{
+  id: "E8AI61RIZYGG5KP",
+  title: "Fix a Hole in Drywall",
+  body: "Tue Mar 21 14:24:47 PDT 2017",
+  photo_url: "https://cdn.instructables.com/FDT/29E5/J0IEFAN2/FDT29E5J0IEFAN2.SQUARE2.jpg"
+},{
+  id: "EZF81C8H5IRVVW8",
+  title: "How to Store Tights and Stockings by Tying them into Simple Knots",
+  body: "Wed Aug 08 13:12:46 PDT 2012",
+  photo_url: "https://cdn.instructables.com/FOJ/JTOC/H5JVXEPI/FOJJTOCH5JVXEPI.SQUARE2.jpg"
+},{
+  id: "ERIWK3UIU3PZPTA",
+  title: "Tutorial to interface GSM SIM900A with Arduino",
+  body: "Thu Nov 03 00:42:00 PDT 2016",
+  photo_url: "https://cdn.instructables.com/F5N/HAQJ/IV0AAMMD/F5NHAQJIV0AAMMD.SQUARE2.jpg"
+},{
+  id: "E13KOZHIG5EHJG1",
+  title: "HackerBoxes 0000: DC Circuits, Software Radio, RFID, Infrared",
+  body: "Wed Nov 04 09:56:18 PST 2015",
+  photo_url: "https://cdn.instructables.com/FGI/GRJQ/IJQNWHUO/FGIGRJQIJQNWHUO.SQUARE2.jpg"
+},{
+  id: "EF71VM2HX8HN5CL",
+  title: "How To Tame Animals In Minecraft",
+  body: "Sat Jul 05 17:35:57 PDT 2014",
+  photo_url: "https://cdn.instructables.com/F07/XHJJ/HX8HN5CA/F07XHJJHX8HN5CA.SQUARE2.jpg"
+},{
+  id: "EGUAJGYIRXTYP8G",
+  title: "HOMEMADE CLAW MACHINE",
+  body: "Sat Sep 24 12:56:58 PDT 2016",
+  photo_url: "https://cdn.instructables.com/F26/6JWZ/ITHE52DS/F266JWZITHE52DS.SQUARE2.jpg"
+},{
+  id: "EM9QBBDHPO2G498",
+  title: "How to check omr answer sheets quickly ?",
+  body: "Thu Dec 26 23:55:49 PST 2013",
+  photo_url: "https://cdn.instructables.com/FGA/QOTY/HPOWCK8G/FGAQOTYHPOWCK8G.SQUARE2.jpg"
+},{
+  id: "E9W5AIRG6MPLGC1",
+  title: "Fake Matrix Virus",
+  body: "Thu Mar 03 00:03:15 PST 2011",
+  photo_url: "http://www.instructables.com/static/defaultIMG/default.SQUARE2.png",
+},{
+  id: "E747G7HIVO4N1V7",
+  title: "Mechanical Xylophone",
+  body: "Mon Mar 13 09:38:14 PDT 2017",
+  photo_url: "https://cdn.instructables.com/FVU/B8R9/J08EB1GR/FVUB8R9J08EB1GR.SQUARE2.jpg"
+},{
+  id: "E06D6M0FW5H06JS",
+  title: "The Pocket Tacklebox",
+  body: "Wed Jun 24 12:36:06 PDT 2009",
+  photo_url: "https://cdn.instructables.com/FYC/REWS/FWBNLN66/FYCREWSFWBNLN66.SQUARE2.jpg"
+},{
+  id: "EQBLW2SH8CVKZ3V",
+  title: "Frog Eye Salad",
+  body: "Sat Oct 20 15:34:28 PDT 2012",
+  photo_url: "https://cdn.instructables.com/FN4/4K2H/H8CVKZ3K/FN44K2HH8CVKZ3K.SQUARE2.jpg"
+},{
+  id: "ERKSCH7HD4VFFFC",
+  title: "What To Make With Leftover Biscuits",
+  body: "Sat Feb 16 15:20:49 PST 2013",
+  photo_url: "https://cdn.instructables.com/F3Z/1AI8/HD4VFFF8/F3Z1AI8HD4VFFF8.SQUARE2.jpg"
+},{
+  id: "EJBEYL3IU5V038M",
+  title: "From Blink to Blynk, an IoT Journey on the Wings of NodeMCU ESP-12E",
+  body: "Thu Oct 13 09:26:09 PDT 2016",
+  photo_url: "https://cdn.instructables.com/FF7/CMM6/IU9UVGTD/FF7CMM6IU9UVGTD.SQUARE2.jpg"
+},{
+  id: "E1RBMUQI55MTOOK",
+  title: "Use A Stove Butane Cartridge To Fill Lighters",
+  body: "Tue Jan 20 17:59:27 PST 2015",
+  photo_url: "https://cdn.instructables.com/F22/G651/I55MTNKU/F22G651I55MTNKU.SQUARE2.jpg"
+},{
+  id: "EMZIAHBIEFZV05Z",
+  title: "EXCAVATOR WITH SYRINGE HYDRAULICS",
+  body: "Fri Sep 11 07:26:34 PDT 2015",
+  photo_url: "https://cdn.instructables.com/FK5/RNXE/IJYUM9BO/FK5RNXEIJYUM9BO.SQUARE2.jpg"
+},{
+  id: "E979UQAJ08ENEWS",
+  title: "Simple, Low Cost and Accurate Stepper Motor Driver",
+  body: "Thu Mar 16 03:43:42 PDT 2017",
+  photo_url: "https://cdn.instructables.com/F5Z/7DFX/J08ENNUV/F5Z7DFXJ08ENNUV.SQUARE2.jpg"
+},{
+  id: "EH49DWWF4SAQROX",
+  title: "Radio Direction Finding Antenna for VHF",
+  body: "Tue Jul 31 17:47:02 PDT 2007",
+  photo_url: "https://cdn.instructables.com/FFM/KEMI/F4SAQRPT/FFMKEMIF4SAQRPT.SQUARE2.jpg"
+},{
+  id: "EXU7JLTHY5Y4D64",
+  title: "\"Dry Ice\" Ice Cream!",
+  body: "Sun Aug 03 19:58:31 PDT 2014",
+  photo_url: "https://cdn.instructables.com/F8K/HLCL/HYC6GK7S/F8KHLCLHYC6GK7S.SQUARE2.jpg"
+},{
+  id: "EW8TPU5IJEKMJ4S",
+  title: "Web Connected Weather Station",
+  body: "Mon Jan 18 09:18:23 PST 2016",
+  photo_url: "https://cdn.instructables.com/FIR/0NPF/IJIX75WM/FIR0NPFIJIX75WM.SQUARE2.jpg"
+}]
+
+items.each do |item|
+  Guide.create(title: item[:title], body: item[:body], photo_url: item[:photo_url], author_id: rand(8))
+end
