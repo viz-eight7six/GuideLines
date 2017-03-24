@@ -1,7 +1,16 @@
 class Api::GuidesController < ApplicationController
   def index
-    @guides = Guide.all
-    render "api/guides/index"
+    guides = Guide.all
+    if params[:query]
+      guides = guides.where('name ILIKE ?', "%#{params[:query]}%")
+    end
+    @guides = guides
+    render :index
+  end
+
+  def show
+    @guide = Guide.find_by(id: params[:id])
+    render :show
   end
 
   def create

@@ -4,7 +4,20 @@ import {RECEIVE_ALL_GUIDES, RECEIVE_GUIDE,
     CREATE_COMMENT, DELETE_COMMENT} from "../actions/guide_actions";
 import {merge} from 'lodash';
 
-const guideReducer = (state = {errors: []}, action) => {
+let defaultState = {
+  guides: [],
+  guide: {
+    steps: [],
+    owner: {
+      username: ""
+    },
+    title: "",
+    body: "",
+    photo_url: ""
+   },
+  errors: []};
+
+const guideReducer = (state = defaultState, action) => {
   switch (action.type) {
     case RECEIVE_ALL_COMMENTS:
       let comments = action.comments;
@@ -26,6 +39,7 @@ const guideReducer = (state = {errors: []}, action) => {
       let guides = action.guides;
       return merge({}, state, {guides});
     case RECEIVE_GUIDE:
+      debugger
       let guide = action.guide;
       return merge({}, state, {guide});
     case CREATE_GUIDE:

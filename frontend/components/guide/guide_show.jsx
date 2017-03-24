@@ -10,9 +10,11 @@ class GuideShow extends React.Component {
     this.removeComment = this.removeComment.bind(this);
   }
 
-  componentDidMount(){
-    this.props.getGuide(this.props.guide.id);
+  componentWillMount(){
+    this.props.getGuide(this.props.params.guideId);
   }
+
+
 
   componentWillReceiveProps(nextProps){
     if(this.props.newComment !== nextProps.newComment){
