@@ -209,10 +209,12 @@
    flex-direction: column;
    background-color: #f5f5f5;
    font-size: 18px;
+   max-width: 200px;
  }
 
  .guide-index-item-container > h2{
    font-size: 14px;
+   max-width: 200px;
  }
  .guide-index-img {
    height: 200px;
@@ -221,7 +223,7 @@
 
  .guide-link:hover {
    text-decoration-line: underline;
-   text-decoration-color: blue;
+   color: blue;
    cursor: pointer;
  }
 

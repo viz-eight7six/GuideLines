@@ -7,6 +7,9 @@ import _ from 'lodash';
 
 const mapStateToProps = (state, ownProps) => {
   let guide = { title: "", body: "", steps: [], photo_url: ""};
+  // if(ownProps.params.guideId){
+  //   guide = state.guides[ownProps.params.guideId];
+  // }
   let loggedIn = Boolean(state.session.currentUser);
   let errors = state.guide.errors;
   let currentUser = state.session.currentUser;

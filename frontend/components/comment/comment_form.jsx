@@ -11,9 +11,6 @@ class CommentForm extends React.Component {
       this.setState = this.setState.bind(this);
   }
 
-  componentDidUpdate(){
-
-  }
 
 
 
@@ -29,6 +26,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.redirectIfNotLoggedIn();
     const comment = this.state;
     this.props.createComment(comment);
     this.setState({body: ""});
@@ -69,7 +67,7 @@ class CommentForm extends React.Component {
         <div className="comment-header-bar">
         </div>
         <div className="comment-form-container">
-        <form className="comment-form-box" onSubmit={this.handleSubmit}>
+        <form className="comment-form-box">
           <div className="comment-form">
             <label>
               <textarea className="textarea-input" value={this.state.body}

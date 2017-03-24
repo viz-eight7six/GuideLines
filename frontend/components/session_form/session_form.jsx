@@ -68,7 +68,7 @@ class SessionForm extends React.Component {
 
   loginDemoUser(){
     const demoUser = {
-      username: "demo_user", password: "password"
+      username: "Kermit_the_Frog", password: "password"
     };
     this.props.clearErrors();
     this.props.login(demoUser);

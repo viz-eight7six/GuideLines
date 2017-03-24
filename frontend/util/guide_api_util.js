@@ -17,6 +17,13 @@ export const createGuide = (guide) => (
     data: {guide}
   })
 );
+export const patchGuide = (guide) => (
+  $.ajax({
+    method: "PATCH",
+    url: `api/guide/${guide.id}`,
+    data: {guide}
+  })
+);
 export const deleteGuide = () => (
   $.ajax({
     method: "DELETE",
@@ -31,3 +38,12 @@ export const createComment = (comment) => (
     data: {comment}
   })
 );
+export const deleteComment = (id) => {
+  return (
+    $.ajax({
+      method: "DELETE",
+      url: `api/comments/${id}`
+    })
+  );
+}
+;

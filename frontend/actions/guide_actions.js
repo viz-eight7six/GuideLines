@@ -4,11 +4,14 @@ import {hashHistory} from "react-router";
 export const RECEIVE_ALL_COMMENTS = "RECEIVE_ALL_COMMENTS";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const CREATE_COMMENT ="CREATE_COMMENT";
+export const DELETE_COMMENT ="DELETE_COMMENT";
 export const RECEIVE_ALL_GUIDES = "RECEIVE_ALL_GUIDES";
 export const RECEIVE_GUIDE = "RECEIVE_GUIDE";
 export const CREATE_GUIDE = "CREATE_GUIDE";
+export const UPDATE_GUIDE = "UPDATE_GUIDE";
 export const RECEIVE_GUIDE_ERRORS = "RECEIVE_GUIDE_ERRORS";
 export const CLEAR_GUIDE_ERRORS = "CLEAR_GUIDE_ERRORS";
+
 
 export const receiveAllComments = (comments) => ({
   type: RECEIVE_ALL_COMMENTS,
@@ -31,6 +34,10 @@ export const makeComment = (comment) => ({
   type: CREATE_COMMENT,
   comment
 });
+export const removeComment = (id) => ({
+  type: DELETE_COMMENT,
+  id
+});
 export const createGuide = (guide) => ({
   type: CREATE_GUIDE,
   guide
@@ -43,10 +50,18 @@ export const clearGuideErrors = () => ({
   type: CLEAR_GUIDE_ERRORS
 });
 
+
+
 export const createComment = (newComment) => dispatch => (
   guideApi.createComment(newComment).then(comment =>
     dispatch(receiveComment(comment)))
 );
+export const deleteComment = (id) => dispatch => {
+  return (
+    guideApi.deleteComment(id).then(cid =>
+      dispatch(removeComment(cid)))
+  );
+};
 
 export const getAllGuides = () => dispatch => (
   guideApi.fetchGuides().then(guides =>
@@ -60,6 +75,12 @@ export const getGuide = (id) => dispatch => (
 );
 export const makeGuide = (newGuide) => dispatch => (
   guideApi.createGuide(newGuide).then(guide =>
+    dispatch(receiveGuide(guide)),
+      errors => dispatch(receiveGuideErrors(errors.responseJSON)))
+      .then(res => hashHistory.push(`/guides/${res.guide.id}`))
+);
+export const updateGuide = (newGuide) => dispatch => (
+  guideApi.patchGuide(newGuide).then(guide =>
     dispatch(receiveGuide(guide)),
       errors => dispatch(receiveGuideErrors(errors.responseJSON)))
       .then(res => hashHistory.push(`/guides/${res.guide.id}`))

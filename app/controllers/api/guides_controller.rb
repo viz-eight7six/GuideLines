@@ -35,6 +35,19 @@ class Api::GuidesController < ApplicationController
     @guide = Guide.find_by(id: id)
     @user = current_user
     if (@user.id == @guide.author_id && @guide.update(guide_params))
+      @steps = params[:guide][:steps]
+      if @steps
+        @steps = @steps.values
+        @steps.each do |step|
+          @step = Step.find_by(id: step.id)
+          unless @step.update
+            render(
+            json: {errors: @step.errors.full_messages},
+            status: 401
+            )
+          end
+        end
+      end
       render "api/guides/show"
     end
     render(
@@ -52,7 +65,7 @@ class Api::GuidesController < ApplicationController
         status: 404
       )
     end
-    render "api/guides/index"
+    render json: {}, status: 200
   end
 
   private

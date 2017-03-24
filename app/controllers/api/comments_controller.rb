@@ -30,15 +30,22 @@ class Api::CommentsController < ApplicationController
   # end
 
   def destroy
-    @comment = Comment.find_by(id: id)
-    @user = current_user
-    if (@user.id != @comment.author_id)
-      render(
-        json: {errors: ["Not owner"]},
-        status: 404
-      )
-    end
-    render "api/comments/index"
+    @comment = Comment.find(params[:id])
+    # @user = current_user
+    # if (@user.id != @comment.author_id)
+    #   render(
+    #     json: {errors: ["Not owner"]},
+    #     status: 404
+    #   )
+    # end
+    @comment.delete
+    render json: {
+          id: @comment.id,
+          guide_id: @comment.guide_id,
+          guide: @comment.guide,
+          author: @comment.author,
+          author_id: @comment.author_id
+        }, status: 200
   end
 
   private

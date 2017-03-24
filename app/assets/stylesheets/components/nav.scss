@@ -13,12 +13,43 @@ background-color: #e0e0de;
 
 .left-nav > ul {
  margin-left: 1px;
+ display: flex;
+ flex-direction: row;
  padding-left: 15px;
  cursor: pointer;
  font-weight: bold;
- font-family:sans-serif;
- font-size: 20px;
+ font-family: "Raleway Dots", cursive;
+ font-size: 40px;
  transition: background-color 0.3s;
+}
+
+.Search-Bar-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-family: 'Meera Inimai';
+  font-size: 20px;
+}
+
+.Search-Bar-form > .btn{
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.Search-Input {
+  background-color: white;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  vertical-align: middle;
 }
 
 .right-nav > ul {

@@ -1,7 +1,7 @@
 import {RECEIVE_ALL_GUIDES, RECEIVE_GUIDE,
   CREATE_GUIDE,RECEIVE_GUIDE_ERRORS,
   CLEAR_GUIDE_ERRORS, RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT,
-    CREATE_COMMENT} from "../actions/guide_actions";
+    CREATE_COMMENT, DELETE_COMMENT} from "../actions/guide_actions";
 import {merge} from 'lodash';
 
 const guideReducer = (state = {errors: []}, action) => {
@@ -17,6 +17,11 @@ const guideReducer = (state = {errors: []}, action) => {
     case CREATE_COMMENT:
       comment = action.comment;
       return merge({}, state, {comment});
+    case DELETE_COMMENT:
+      newState = merge({}, state);
+      let idx = newState.guides[action.id.guide_id].comments.findIndex((c) => (c.id === action.id.id));
+      newState.guides[action.id.guide_id].comments.splice(idx, 1);
+      return newState;
     case RECEIVE_ALL_GUIDES:
       let guides = action.guides;
       return merge({}, state, {guides});

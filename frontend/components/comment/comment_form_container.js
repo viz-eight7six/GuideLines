@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { getComment, clearCommentErrors } from '../../actions/comment_actions';
 import CommentForm from './comment_form';
-import {createComment} from '../../actions/guide_actions';
+import {createComment, deleteComment} from '../../actions/guide_actions';
 import _ from 'lodash';
 
 

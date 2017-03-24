@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import {Link} from 'react-router';
+import SearchBar from "./search/search_bar";
 
 const App = ({ children }) => (
   <section className='whole'>
@@ -10,6 +11,7 @@ const App = ({ children }) => (
           <ul>
             <Link to='/'>
               <div className='logo'/>Guidelines</Link>
+            <SearchBar/>
           </ul>
         </nav>
         <nav className="right-nav">
