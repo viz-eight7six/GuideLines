@@ -38,7 +38,8 @@ const guideReducer = (state = defaultState, action) => {
       newState.guides[action.id.guide_id].comments.splice(idx, 1);
       return newState;
     case RECEIVE_ALL_GUIDES:
-      let newGuides = _.values(action.guides);
+      let newGuides = [];
+      Object.values(action.guides).forEach(guide => (newGuides[guide.id] = guide) );
       newState = merge({}, state);
       Object.assign(newState, {guides: newGuides});
       return newState;

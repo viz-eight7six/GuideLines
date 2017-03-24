@@ -1,7 +1,11 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
-import {Link} from 'react-router';
-import SearchBarContainer from "./search/search_bar_container";
+import {Link, hashHistory} from 'react-router';
+import SearchBarContainer from "./search/search_bar";
+
+let createGuide = () => (
+  hashHistory.push("/guides/new")
+);
 
 const App = ({ children }) => (
   <section className='whole'>
@@ -20,7 +24,9 @@ const App = ({ children }) => (
       </nav>
       <nav className='bottom-nav'>
         <nav></nav>
-        <h1>Let's Make Something!</h1>
+          <label className="btn">
+          <input type="checkbox" id="btnControl" onClick={createGuide}/>
+             Let's Make Something!</label>
       </nav>
     </header>
     { children }

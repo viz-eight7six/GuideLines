@@ -41,6 +41,9 @@ background-color: #e0e0de;
   text-align: center;
   font-size: 20px;
   vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Search-Input {
@@ -76,4 +79,8 @@ background-color: #e0e0de;
 .logo {
   background-image: url(robot.png);
   background-size: 15px 15px;
+}
+
+.bottom-nav > .btn {
+  width: 150px;
 }

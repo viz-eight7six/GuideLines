@@ -22,7 +22,6 @@ class SearchBar extends React.Component {
   handleSubmit (e) {
     e.preventDefault();
     this.props.searchGuides(this.state.inputVal);
-    debugger
     return hashHistory.push("/");
   }
 
