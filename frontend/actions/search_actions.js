@@ -1,4 +1,4 @@
-import * as SearchApiUtil from '../util/search_api_util.js';
+import * as GuideApiUtil from '../util/guide_api_util';
 import { receiveAllGuides } from "./guide_actions";
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
 
@@ -8,6 +8,6 @@ export const receiveSearch = (searchResults) => ({
 });
 
 export const searchGuides = (searchTerm) => dispatch => (
-  SearchApiUtil.searchGuides(searchTerm)
+  GuideApiUtil.fetchGuides(searchTerm)
   .then((guides => dispatch(receiveAllGuides(guides))))
 );

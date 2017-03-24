@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import Search from './search';
+import SearchBar from './search_bar';
 import { searchGuides } from "../../actions/search_actions";
 
 const mapStateToProps = (state) => ({
-  searches: state.searches
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -13,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search);
+)(SearchBar);

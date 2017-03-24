@@ -7,7 +7,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import GuidesIndexContainer from './guide/guides_index_container';
 import GuideFormContainer from './guide/guide_form_container';
 import GuideShowContainer from './guide/guide_show_container';
-import SearchContainer from './search/search_container';
+import SearchBarContainer from './search/search_bar_container';
 
 const Root = ({ store }) => {
 
@@ -36,7 +36,6 @@ const _redirectIfLoggedIn = (nextState, replace) => {
           <Route path="/guides/new" component={ GuideFormContainer } onEnter={_ensureLoggedIn} />
           <Route path="/guides/:guideId" component={ GuideShowContainer } />
           <Route path="/guides/:guideId/edit" component={ GuideFormContainer } />
-          <Route path="/guides/search" component={ SearchContainer } />
         </Route>
       </Router>
     </Provider>

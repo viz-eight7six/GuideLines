@@ -7,7 +7,7 @@ import { createSelector } from 'reselect';
 
 const guidesSelector = state => state.guide.guides;
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => { 
   let comments = [];
   if (state.guide.guides[ownProps.params.guideId]){
     comments = state.guide.guides[ownProps.params.guideId].comments;

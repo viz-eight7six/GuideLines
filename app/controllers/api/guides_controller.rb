@@ -2,7 +2,7 @@ class Api::GuidesController < ApplicationController
   def index
     guides = Guide.all
     if params[:query]
-      guides = guides.where('name ILIKE ?', "%#{params[:query]}%")
+      guides = guides.where('title ILIKE ?', "%#{params[:query]}%")
     end
     @guides = guides
     render :index

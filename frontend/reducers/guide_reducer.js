@@ -3,6 +3,7 @@ import {RECEIVE_ALL_GUIDES, RECEIVE_GUIDE,
   CLEAR_GUIDE_ERRORS, RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT,
     CREATE_COMMENT, DELETE_COMMENT} from "../actions/guide_actions";
 import {merge} from 'lodash';
+import _ from "lodash";
 
 let defaultState = {
   guides: [],
@@ -13,7 +14,8 @@ let defaultState = {
     },
     title: "",
     body: "",
-    photo_url: ""
+    photo_url: "",
+    comments: []
    },
   errors: []};
 
@@ -36,10 +38,11 @@ const guideReducer = (state = defaultState, action) => {
       newState.guides[action.id.guide_id].comments.splice(idx, 1);
       return newState;
     case RECEIVE_ALL_GUIDES:
-      let guides = action.guides;
-      return merge({}, state, {guides});
+      let newGuides = _.values(action.guides);
+      newState = merge({}, state);
+      Object.assign(newState, {guides: newGuides});
+      return newState;
     case RECEIVE_GUIDE:
-      debugger
       let guide = action.guide;
       return merge({}, state, {guide});
     case CREATE_GUIDE:

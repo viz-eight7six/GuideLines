@@ -4,9 +4,8 @@ import { getAllGuides, getGuide,
 import GuidesIndex from './guides_index';
 import _ from 'lodash';
 
-
 const mapStateToProps = (state, ownProps) => ({
-  guides: _.values(state.guide.guides)
+  guides: state.guide.guides
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

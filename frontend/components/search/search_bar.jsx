@@ -1,6 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-import { searchGuides } from "../../actions/search_actions.js";
+import { searchGuides } from "../../actions/search_actions";
 
 class SearchBar extends React.Component {
   constructor (props) {
@@ -21,8 +21,9 @@ class SearchBar extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    searchGuides(this.state.inputVal);
-    return hashHistory.push("/guides/search");
+    this.props.searchGuides(this.state.inputVal);
+    debugger
+    return hashHistory.push("/");
   }
 
   render () {
