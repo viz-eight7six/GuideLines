@@ -47,4 +47,44 @@
 .comments-show > img {
   size: 42px 42px;
 }
+
+#btnControl {
+    display: none;
+}
+
+.btn {
+    width: 80px;
+    height: 20px;
+    background: #f8aa2b;
+    border-radius: 5px;
+    padding: 1px 3px;
+    // box-shadow: 1px 1px 1px #000;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    // background-image: linear-gradient(to bottom, #f8aa2b, #dfdddd);
+    font-family: arial;
+    font-size: 12px;
+    line-height:20px;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to bottom, #c3e3fa, #a5defb);
+    cursor: pointer;
+
+}
+
+
+.btn:active {
+    margin-left: 1px 1px 0;
+    box-shadow: -1px -1px 1px #000;
+    background-image: linear-gradient(to bottom, #c3e3fa, #a5defb);
+}
+
+// #btnControl:checked + label {
+//     width: 70px;
+//     height: 74px;
+//     line-height: 74px;
+// }
  // / login-wrapper

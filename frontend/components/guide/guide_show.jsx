@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import CommentFormContainer from "../comment/comment_form_container";
 
 class GuideShow extends React.Component {
@@ -22,6 +22,9 @@ class GuideShow extends React.Component {
   // componentDidUpdate(){
   //   this.props.getGuide(this.props.guide.id);
   // }
+  toIndex() {
+    hashHistory.push('/guides');
+  }
 
 render(){
   let steps;
@@ -29,9 +32,11 @@ render(){
     steps = this.props.guide.steps.map((step, idx) => {
         return (
           <li key={idx} className="steps-show">
-            <h1>Step {idx+1}: {step.title}</h1>
-            <br/> <img src={step.photo_url}/>
-            <br/>{step.body}
+            <div>
+              <h1>Step {idx+1}: {step.title}</h1>
+              <br/> <img src={step.photo_url}/>
+              <br/>{step.body}
+            </div>
             </li>
 
         );
@@ -48,7 +53,7 @@ render(){
                 <h1> {comment.author.username}</h1>
               </div>
               <div>
-                <h1> {comment.created_at} </h1>
+                <h1> {comment.created_at.toString().slice(0, 10)} </h1>
               </div>
             </div>
             <div>
@@ -58,6 +63,8 @@ render(){
         );
     });
   }
+
+
   return(
     <section className="guide-full-container">
       <div className="guide-show-header">
@@ -66,17 +73,18 @@ render(){
       </div>
       <div className="guide-body">
         <div className="guide-show-container">
-          <span className="guide-show">
-            <br/>
-            <img src={this.props.guide.photo_url}/>
-            <br/>
-            {this.props.guide.body}
-            <br/>
+          <div className="guide-show">
+            <div className="guide-info">
+              <img src={this.props.guide.photo_url}/>
+              <br/>
+              {this.props.guide.body}
+              <br/>
+            </div>
             <ul>
               {steps}
             </ul>
-          </span>
-          <span className="comments-show-container">
+          </div>
+          <div className="comments-show-container">
             <div className="comment-form-container">
               <CommentFormContainer gid={this.props.guide.id}/>
             </div>
@@ -84,14 +92,16 @@ render(){
             <ul className="comments-show">
               {comments}
             </ul>
-          </span>
-          <Link to="/guides">back to index</Link>
+          </div>
         </div>
         <div className="guide-creator-info-container">
           <span className="guide-creator-info">
             {this.props.guide.owner.username}
             <img src={this.props.guide.owner.photo_url} height='42' width='42'/>
-
+            <br/>
+            <label className="btn">
+              <input type="checkbox" id="btnControl" onClick={this.toIndex}/>
+              Guide Index</label>
           </span>
 
         </div>

@@ -38,13 +38,13 @@ export const clearPhotoErrors = () => ({
 //       errors => dispatch(receivePhotoErrors(errors.responseJSON)))
 // );
 export const makePhoto = (newPhoto) => dispatch => (
-  photoApi.create(newPhoto).then(photo =>
+  photoApi.createPic(newPhoto).then(photo =>
     dispatch(receivePhoto(photo)),
       errors => dispatch(receivePhotoErrors(errors.responseJSON)))
       // .then((photo) => hashHistory.push(`/photos/${photo.id}`))
 );
 export const removePhoto = () => dispatch => (
-  photoApi.remove().then(photo =>
+  photoApi.removePic().then(photo =>
     dispatch(receivePhoto(null)),
       errors => dispatch(receivePhotoErrors(errors.responseJSON)))
 );

@@ -49,7 +49,7 @@ class PhotoForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const photo =  {photo:{url: this.state.url}};
-    this.props.makePhoto(photo);
+    // this.props.makePhoto({photo});
     // this.props.router.push('/photos');
   }
 
@@ -82,15 +82,29 @@ class PhotoForm extends React.Component {
 
   getPhotoUrl(photoUrl){
     this.setState({url: photoUrl});
+    const photo =  {url: this.state.url};
+    this.props.getPhoto(this.state.url);
+    this.props.makePhoto(photo);
   }
 
+  // <input type="button" onClick={this.openModal} value="Upload Photo"/>
   render() {
+    let button = (
+        <label className="btn">
+        <input type="checkbox" id="btnControl" onClick={this.openModal}/>
+           Upload Photo</label>
+    );
+
+    if(this.state.url !== ""){
+      button = <img className="photo-form-pic" src={this.state.url}></img>;
+    }
+
     return (
       <div className="photo-form-wrapper">
         <div className="photo-header-bar">
           <div >
     				<nav className="photo-upload-modal">
-    					<button onClick={this.openModal}>Upload Photo</button>
+    					{button}
     				</nav>
     				<Modal
     					contentLabel="Modal"

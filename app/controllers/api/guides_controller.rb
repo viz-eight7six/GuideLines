@@ -58,7 +58,7 @@ class Api::GuidesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit(:title, :body, :steps)
+    params.require(:guide).permit(:title, :body, :steps, :photo_url)
   end
 
   def guide_only_params

@@ -104,9 +104,10 @@
    box-sizing: border-box;
    border-radius: 5px;
 }
- .login-form-box > input[type=submit] {
+ .login-form-box > .btn {
    width: 100%;
    padding: 12px 20px;
+   height: 40px;
    margin: 8px 0;
    background-color: #f8aa2b;
    box-sizing: border-box;

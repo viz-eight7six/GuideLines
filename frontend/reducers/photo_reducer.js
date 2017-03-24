@@ -10,8 +10,7 @@ const photoReducer = (state = {errors: []}, action) => {
       return merge({}, state, {photos});
     case RECEIVE_PHOTO:
       let photo = action.photo;
-      let newState = merge( {}, state );
-      newState.session.currentUser.photos.push(photo);
+      let newState = merge( {}, state, {photo});
       return newState;
     case CREATE_PHOTO:
       photo = action.photo;

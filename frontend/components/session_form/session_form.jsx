@@ -81,8 +81,7 @@ class SessionForm extends React.Component {
           <h1 className="login-form-header">{this.props.formType}</h1>
         </div>
         <div className="login-form-container">
-        <form className="login-form-box"
-          onSubmit={this.handleSubmit}>
+        <form className="login-form-box">
           <div className="login-form">
             <label>
               <input type="text" value={this.state.username}
@@ -100,8 +99,12 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
             <br/>
           </div>
-          <input type="submit" value={this.props.formType}></input>
-          <input type="button" value="Demo" onClick={this.loginDemoUser}></input>
+          <label className="btn">
+          <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>
+             {this.props.formType}</label>
+          <label className="btn">
+          <input type="checkbox" id="btnControl" onClick={this.loginDemoUser}/>
+             Demo</label>
         </form>
 
         <div className="login-footer-bar">

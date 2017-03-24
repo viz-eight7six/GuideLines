@@ -38,9 +38,9 @@ gem 'rails_12factor'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'guard', require: false
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
+  # gem 'guard', require: false
+  # gem 'guard-livereload', require: false
+  # gem 'rack-livereload'
 end
 
 group :development do

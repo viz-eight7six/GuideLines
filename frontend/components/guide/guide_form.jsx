@@ -14,6 +14,7 @@ class GuideForm extends React.Component {
       this.setState = this.setState.bind(this);
       this.tempSteps = this.props.guide.steps || [];
       this.deleteStep = this.deleteStep.bind(this);
+      this.getPhoto = this.getPhoto.bind(this);
   }
 
   componentDidUpdate(){
@@ -41,7 +42,7 @@ class GuideForm extends React.Component {
 
   addStep(e) {
     e.preventDefault();
-    let newStep = {title: "", body: ""};
+    let newStep = {title: "", body: "", photo_url: ""};
     this.tempSteps.push(newStep);
     this.setState({steps: this.tempSteps});
   }
@@ -104,32 +105,35 @@ class GuideForm extends React.Component {
   //   return redirectLink;
   // }
 
-  render() {
-    let photos;
-    if(this.props.currentUser.photos){
-      this.props.currentUser.photos.map((photo, idx) => (
+  getPhoto(url){
+    this.setState({photo_url: url});
+  }
 
-        <li>
-          <img src={photo.url}/>
-        </li>
-      ));
-    }
+  render() {
+    // let photos;
+    // if(this.props.currentUser.photos){
+    //   this.props.currentUser.photos.map((photo, idx) => (
+    //
+    //     <li>
+    //       <img src={photo.url}/>
+    //     </li>
+    //   ));
+    // }
+    // <nav>
+    //   <ul>
+    //     {photos}
+    //   </ul>
+    // </nav>
     return (
       <div className="guide-form-wrapper">
         <div className="guide-header-bar">
           <h1 className="guide-form-header">New Guide</h1>
         </div>
-        <nav>
-          <ul>
-            {photos}
-          </ul>
-          <PhotoFormContainer/>
-        </nav>
         <div className="guide-form-container">
-        <form className="guide-form-box"
-          onSubmit={this.handleSubmit}>
+        <form className="guide-form-box">
           <div className="guide-form">
             <label>
+              <PhotoFormContainer getPhoto={this.getPhoto}/>
               <input type="text" className="string-input" value={this.state.title}
                 onChange={this.update('title')}
                 placeholder='Title'
@@ -148,8 +152,12 @@ class GuideForm extends React.Component {
           </div>
           {this.renderStepForm()}
           <br/>
-          <input type="button" onClick={this.addStep} value="Add Step"></input>
-          <input type="submit" value='Create Guide'></input>
+          <label className="btn">
+          <input type="checkbox" id="btnControl" onClick={this.addStep}/>
+            Add Step</label>
+          <label className="btn">
+          <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>
+            Create Guide</label>
         </form>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import PhotoFormContainer from "../photo/photo_form_container";
 
 class StepForm extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class StepForm extends React.Component {
       this.update = this.update.bind(this);
       this.setState = this.setState.bind(this);
       this.removeStep = this.removeStep.bind(this);
+      this.getPhoto = this.getPhoto.bind(this);
   }
 
   componentDidUpdate(){
@@ -40,18 +42,18 @@ class StepForm extends React.Component {
     });
   }
 
-  // renderErrors(){
-  //   if(this.props.errors){
-  //     let errors = this.props.errors.map((error, i) => (
-  //       <li key={i} className='errors'>{error}</li>
-  //     ));
-  //     return (
-  //       <ul>
-  //         {errors}
-  //       </ul>
-  //     );
-  //   }
-  // }
+  renderErrors(){
+    if(this.props.errors){
+      let errors = this.props.errors.map((error, i) => (
+        <li key={i} className='errors'>{error}</li>
+      ));
+      return (
+        <ul>
+          {errors}
+        </ul>
+      );
+    }
+  }
 
   componentWillReceiveProps(nextProps){
     if (this.props !== nextProps){
@@ -67,6 +69,10 @@ class StepForm extends React.Component {
     this.props.deleteStep(this.props.id);
   }
 
+  getPhoto(url){
+    this.setState({photo_url: url});
+  }
+
 
   render() {
     return (
@@ -77,6 +83,7 @@ class StepForm extends React.Component {
         <div className="step-form-container">
         <form className="step-form-box">
           <div className="step-form">
+            <PhotoFormContainer getPhoto={this.getPhoto}/>
             <label>
               <input type="text" className="string-input" value={this.state.title}
                 onChange={this.update('title')}
@@ -92,8 +99,11 @@ class StepForm extends React.Component {
                 />
             </label>
             <br/>
+            {this.renderErrors()}
           </div>
-          <input type="button" onClick={this.removeStep} value="remove step"></input>
+          <label className="btn">
+          <input type="checkbox" id="btnControl" onClick={this.removeStep}/>
+             Remove Step</label>
         </form>
       </div>
     </div>

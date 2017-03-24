@@ -127,8 +127,20 @@
 
 .steps-show {
   border-radius: 5px;
-  margin: 5px;
+  margin-bottom: 5px;
   padding: 10px;
+  background-color: #dbe0e4;
+}
+
+.steps-show >div {
+  margin: 5px;
+}
+
+.guide-info {
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #dbe0e4;
 }
 
 .guide-show-container > h1 {
@@ -213,19 +225,26 @@
    cursor: pointer;
  }
 
-.comments-show-cotainer {
+.comments-show-container {
   display: flex;
   flex-direction: column;
+  background-color: #dbe0e4;
+  border-radius: 5px;
 }
 
  .comments-show {
    display: flex;
-   flex-direction: column;
+   flex-direction: column-reverse;;
+   margin: 5px;
  }
 
  .comments-show > li{
    display: flex;
    flex-direction: column;
+   background-color: #F5F5F5;
+   border-radius: 5px;
+   padding: 2px;
+   margin-bottom: 5px;
  }
 
  .comments-show > li > .comment-head{
@@ -236,6 +255,7 @@
  .comments-show > li > .comment-head > div{
    display: flex;
    flex-direction: row;
+   margin: 5px;
  }
 
  .comment-user-img {
@@ -243,11 +263,15 @@
    width: 42px;
  }
 
+ .comment-form-container {
+   margin: 5px;
+ }
+
  .comment-form > input[type=submit] {
    width: 20%;
    padding: 12px 20px;
    margin: 8px 0;
-   background-color: #f8aa2b;
+   background-color: #000;
    box-sizing: border-box;
    border-radius: 5px;
    text-align: center;

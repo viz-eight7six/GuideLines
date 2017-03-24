@@ -1,4 +1,4 @@
-export const create = (photo) => (
+export const createPic = (photo) => (
   $.ajax({
     method: "POST",
     url: "api/photos",
@@ -6,7 +6,7 @@ export const create = (photo) => (
   })
 );
 
-export const remove = () => (
+export const removePic = () => (
   $.ajax({
     method: "DELETE",
     url: "api/photos",

@@ -31,6 +31,7 @@ class CommentForm extends React.Component {
     e.preventDefault();
     const comment = this.state;
     this.props.createComment(comment);
+    this.setState({body: ""});
     this.props.router.push(`/guides/${this.state.guide_id}`);
   }
 
@@ -66,20 +67,20 @@ class CommentForm extends React.Component {
     return (
       <div className="comment-form-wrapper">
         <div className="comment-header-bar">
-          <h1 className="comment-form-header">Write a Comment</h1>
         </div>
         <div className="comment-form-container">
         <form className="comment-form-box" onSubmit={this.handleSubmit}>
           <div className="comment-form">
             <label>
-              <br/>
               <textarea className="textarea-input" value={this.state.body}
                   onChange={this.update('body')}
-                placeholder='Description'
+                placeholder='Write a Comment'
                 />
             </label>
             <br/>
-            <input type="submit" value="Submit Comment"></input>
+            <label className="btn">
+            <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>
+               Submit</label>
           </div>
         </form>
       </div>
