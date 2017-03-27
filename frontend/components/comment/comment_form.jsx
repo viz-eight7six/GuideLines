@@ -30,7 +30,7 @@ class CommentForm extends React.Component {
     const comment = this.state;
     this.props.createComment(comment);
     this.setState({body: ""});
-    // this.props.router.push(`/guides/${this.state.guide_id}`);
+    this.props.router.push(`/guides/${this.state.guide_id}`);
   }
 
   update(property) {
@@ -60,8 +60,31 @@ class CommentForm extends React.Component {
   //   return this.props.deleteComment(this.props.id);
   // }
 
+  buttonRender () {
+    if (this.props.loggedIn){
+      return (
+        <label className="btn">
+        <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>
+           Submit</label>
+       );
+    }
+    else {
+      return (
+        <h1>Log in to write a comment</h1>
+      );
+    }
+  }
+
+
 
   render() {
+    let msgRender = "";
+    if (this.props.loggedIn){
+      msgRender = "Write a Comment";
+    }
+    else{
+      msgRender = "Please Log in to write a comment";
+    }
     return (
       <div className="comment-form-wrapper">
         <div className="comment-header-bar">
@@ -72,13 +95,11 @@ class CommentForm extends React.Component {
             <label>
               <textarea className="textarea-input" value={this.state.body}
                   onChange={this.update('body')}
-                placeholder='Write a Comment'
+                placeholder={this.msgRender}
                 />
             </label>
             <br/>
-            <label className="btn">
-            <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>
-               Submit</label>
+             {this.buttonRender}
           </div>
         </form>
       </div>
