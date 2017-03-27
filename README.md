@@ -17,6 +17,8 @@ Guidelines is a full-stack web application inspired by [Instructables]. This web
 
   Guides are rendered as an index and a show page. The index only contains the title and photo and author's username.
 
+  ![image of guide create](docs/wireframes/guide form.jpeg)
+
 ### Comments
 
   Users are allowed to make comments on the guides. Comments show from the most recent to latest one going down. Users are also allowed to delete comments.
