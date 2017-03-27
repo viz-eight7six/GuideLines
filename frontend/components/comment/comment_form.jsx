@@ -99,7 +99,9 @@ class CommentForm extends React.Component {
                 />
             </label>
             <br/>
-             {this.buttonRender}
+             <label className="btn">
+             <input type="checkbox" id="btnControl" onClick={this.handleSubmit}/>
+                Submit</label>
           </div>
         </form>
       </div>
