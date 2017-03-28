@@ -2,7 +2,7 @@
 
 [Guidelines live][heroku]
 
-[heroku]: http://www.how-do-i-.herokuapp.com
+[heroku]: http://www.guidelines.tips
 [Instructables]: http://www.Instructables.com
 
 Guidelines is a full-stack web application inspired by [Instructables]. This web-app uses a React-Redux framework that connects to a PostgreSQL DB with Ruby on Rails.
