@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://www.how-do-i-.herokuapp.com
 [trello]: https://trello.com/b/gW4znUwg/instructables-full-stack-project
 
 ##Minimum Viable Product
