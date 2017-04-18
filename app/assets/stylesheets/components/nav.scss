@@ -1,10 +1,20 @@
+$color-gunmetal: #293132;
+$color-ube: #8367C7;
+$color-plump-purple: #6034B1;
+$color-mint-cream: #F7FFF7;
+$color-lavander: #D9D0DE;
+
+
 .main-nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
 padding-top: 20px;
 padding-bottom: 20px;
-background-color: #e0e0de;
+background-color: $color-ube;
+margin-right: 10;
+margin-left: 10;
+min-width: 1000px;
 }
 
 .left-nav,
@@ -19,7 +29,7 @@ background-color: #e0e0de;
  padding-left: 15px;
  cursor: pointer;
  font-weight: bold;
- font-family: "Raleway Dots", cursive;
+ font-family: "Codystar", cursive;
  font-size: 40px;
  transition: background-color 0.3s;
 }
@@ -44,14 +54,20 @@ background-color: #e0e0de;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-plump-purple;
+}
+
+.btn {
+  background-color: $color-plump-purple;
 }
 
 .Search-Input {
-  background-color: white;
+  background-color: $color-lavander;
   border-radius: 5px;
   height: 30px;
   padding: 5px;
   margin: 5px;
+  margin-top: 3px;
   vertical-align: middle;
 }
 
@@ -68,8 +84,13 @@ background-color: #e0e0de;
 }
 
 .bottom-nav {
+
 }
 
 .bottom-nav > .btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
   width: 150px;
+  background-color: $color-plump-purple;
 }

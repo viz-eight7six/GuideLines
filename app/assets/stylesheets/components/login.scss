@@ -1,9 +1,19 @@
+$color-gunmetal: #293132;
+$color-ube: #8367C7;
+$color-plump-purple: #6034B1;
+$color-mint-cream: #F7FFF7;
+$color-lavander: #D9D0DE;
+
+.login-wrapper {
+  width: 800px;
+}
+
 .login-header-bar {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
   border: 1px grey;
-  background-color: #F5F5F5;
+  background-color: $color-ube;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-family:monospace;
@@ -33,17 +43,18 @@
   margin-right: 20px;
   padding-bottom: 100px;
   min-width: 635px;
+  width: 100%;
 }
 
 .login-form-container > span {
-  position: fixed;
+  position: absolute;
   align-self: center;;
   display: inline-block;
   vertical-align: middle;
   font-family: 'Gloria Hallelujah';
   font-size: 25px;
-  margin-left: 150px;
-  margin-top: 25px;
+  margin-left: 200px;
+  margin-top: 40px;
 }
 
 .login-form {
@@ -70,7 +81,7 @@
 .login-footer-bar {
   width: 250px;
   margin-left: 20px;
-  background-color: #F5F5F5;
+  background-color: $color-lavander;
   border-top: none;
   padding: 20px;
   margin-left: 20px;
@@ -78,6 +89,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
+  background-color: $color-lavander;
   opacity: 0.8;
 }
 
@@ -92,14 +104,14 @@
    margin: 8px 0;
    border: 1px solid grey;
    box-sizing: border-box;
-   background-color: #FFFFBD;
+   background-color: $color-lavander;
    border-radius: 5px;
 }
  input[type=password] {
    width: 100%;
    padding: 12px 20px;
    margin: 8px 0;
-   background-color: #FFFFBD;
+   background-color: $color-lavander;
    border: 1px solid grey;
    box-sizing: border-box;
    border-radius: 5px;
@@ -109,7 +121,7 @@
    padding: 12px 20px;
    height: 40px;
    margin: 8px 0;
-   background-color: #f8aa2b;
+   background-color: $color-plump-purple;
    box-sizing: border-box;
    border-radius: 5px;
    text-align: center;
@@ -122,7 +134,7 @@
    width: 100%;
    padding: 12px 20px;
    margin: 8px 0;
-   background-color: #f8aa2b;
+   background-color: $color-plump-purple;
    box-sizing: border-box;
    border-radius: 5px;
    text-align: center;

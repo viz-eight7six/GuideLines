@@ -21,7 +21,7 @@ const App = ({ children }) => (
         <nav className='bottom-nav'>
           <label className="btn">
             <input type="checkbox" id="btnControl" onClick={createGuide}/>
-            Let's Make Something!</label>
+            Create Guide!</label>
         </nav>
         <nav className="right-nav">
           <GreetingContainer />
