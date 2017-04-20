@@ -16,8 +16,10 @@ $color-lavander: #D9D0DE;
   border-top-right-radius: 5px;
   min-width: 635px;
   text-align: center;
-  font-family: 'Baloo Bhaina', cursive;
-  font-size: 25px;
+  font-family: 'Special Elite';
+  font-size: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .guide-form-container{
@@ -86,9 +88,11 @@ $color-lavander: #D9D0DE;
   border-radius: 5px;
   min-width: 635px;
   text-align: center;
-  font-family: 'Baloo Bhaina', cursive;
+  font-family: 'Special Elite', cursive;
   font-size: 25px;
   background-color: $color-lavander;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .guide-show-header > h2 {

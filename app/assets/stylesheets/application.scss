@@ -18,7 +18,7 @@
  @import "./guides.scss";
  @import "./components/nav.scss";
  @import "./components/login.scss";
- @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Meera+Inimai|Codystar|Baloo+Bhaina|Bevan');
+ @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Meera+Inimai|Walter+Turncoat|Codystar|Special+Elite|Bevan');
 
  $color-gunmetal: #293132;
  $color-ube: #8367C7;
@@ -30,6 +30,8 @@
    background-color: $color-mint-cream;
    font-family: 'Meera Inimai', sans-serif;
    color: $color-gunmetal;
+   overflow: visible;
+   width: 100%;
  }
 
   .SliderImage-Container {
@@ -78,11 +80,14 @@
    width: 100%;
    min-width: 400px;
    margin-left: 175px;
+   max-width: 800px;
  }
 
  .SliderImage-Container > h2 > span {
    color: white;
-   font: bold 24px/45px Helvetica, Sans-Serif;
+   font: bold;
+   font-family: "Walter Turncoat";
+   font-size: 45px;
    letter-spacing: -1px;
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
