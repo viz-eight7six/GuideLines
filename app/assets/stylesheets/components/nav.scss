@@ -11,9 +11,9 @@ justify-content: space-between;
 align-items: center;
 padding-top: 20px;
 padding-bottom: 20px;
-background-color: $color-ube;
 margin-right: 10;
 margin-left: 10;
+border-bottom: 2px solid;
 min-width: 1000px;
 width: 100%;
 }
@@ -88,6 +88,7 @@ width: 100%;
 }
 
 .bottom-nav > .btn {
+  margin-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 15px;

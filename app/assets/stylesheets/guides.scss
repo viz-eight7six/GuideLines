@@ -203,17 +203,22 @@ $color-lavander: #D9D0DE;
    display: flex;
    flex-wrap: wrap;
    margin: 50px;
+   justify-content: center;
+   min-width: 900px;
+
  }
 
  .guide-list-container > ul {
+   margin-top: 20px;
    justify-content: center;
    min-width: 900px;
    display: flex;
    flex-wrap: wrap;
+   width: 90%
  }
 
  .guide-list-container > ul > li {
-   margin: 10px;
+   margin: 20px;
  }
 
  .guide-index-item-container {
@@ -221,24 +226,26 @@ $color-lavander: #D9D0DE;
    flex-direction: column;
    background-color: $color-lavander;
    font-size: 18px;
-   max-width: 200px;
+   max-width: 300px;
    border-radius: 2px;
  }
 
  .guide-index-detail > h2{
-   font-size: 16px;
-   max-width: 200px;
+   font-size: 13px;
+   max-width: 300px;
+   margin-left: 15px
  }
 
 .guide-index-detail > a{
   font-family: "Bevan";
-  font-size: 18px;
-  max-width: 200px;
+  font-size: 15px;
+  max-width: 300px;
+  margin-left: 15px;
 }
 
  .guide-index-img {
-   height: 200px;
-   width: 200px;
+  //  height: 200px;
+   width: 300px;
    border-top-right-radius: 2px;
    border-top-left-radius: 2px;
  }
