@@ -7,6 +7,7 @@ $color-ube: #8367C7;
 $color-plump-purple: #6034B1;
 $color-mint-cream: #F7FFF7;
 $color-lavander: #D9D0DE;
+$color-red-violet: #bc2a8d;
 
 .guide-header-bar {
   margin-top: 20px;
@@ -224,16 +225,33 @@ $color-lavander: #D9D0DE;
  .guide-index-item-container {
    display: flex;
    flex-direction: column;
-   background-color: $color-lavander;
+   background-color: none;
    font-size: 18px;
    max-width: 300px;
    border-radius: 2px;
+  //  border-bottom: 1px;
+  //  border-right: 1px;
+  //  border-left: 1px;
+  //  border: 1px solid $color-red-violet;
+  //  border-top: none;
+  border: 1px solid $color-red-violet;
+ }
+ .guide-index-detail{
+   padding-top: 10px;
+   padding-bottom: 10px;
+   text-align: left;
+
+ }
+ .guide-index-detail > h2{
+   font-size: 8px;
+   max-width: 300px;
+   margin-left: 15px;
  }
 
- .guide-index-detail > h2{
-   font-size: 13px;
+ .guide-index-detail > h3{
+   font-size: 12px;
    max-width: 300px;
-   margin-left: 15px
+   margin-left: 15px;
  }
 
 .guide-index-detail > a{
@@ -241,6 +259,8 @@ $color-lavander: #D9D0DE;
   font-size: 15px;
   max-width: 300px;
   margin-left: 15px;
+  display: block;
+  margin-right: 15px;
 }
 
  .guide-index-img {
@@ -248,6 +268,7 @@ $color-lavander: #D9D0DE;
    width: 300px;
    border-top-right-radius: 2px;
    border-top-left-radius: 2px;
+   box-shadow: 0px 2px 5px #DDD;
  }
 
  .guide-link:hover {

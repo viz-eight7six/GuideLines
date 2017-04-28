@@ -12,6 +12,7 @@ const GuideIndexItem = ({guide}) => {
           <Link to={`/guides/${guide.id}`} className="guide-link">
             {guide.title}</Link>
           <h2>by: {guide.owner.username}</h2>
+          <h3>{guide.body}</h3>
         </div>
       </li>
     );
