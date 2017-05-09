@@ -29,6 +29,16 @@ const App = ({ children }) => (
       </nav>
     </header>
     { children }
+    <footer>
+      <ul className="icons">
+				<li><a href="https://github.com/viz-eight7six"
+          target="_blank" className="fa-github">
+          <i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/vinsonchen12345/"
+          target="_blank" className="fa-linkedin">
+          <i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+    </footer>
   </section>
 );
 
